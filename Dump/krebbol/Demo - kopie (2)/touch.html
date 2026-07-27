@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Document</title>
+    <style>
+        html, body {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+            touch-action: none;
+        }
+        dot {
+            background: green;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main onload="">
+        <!--<dot>h</dot>-->
+        <div id="dotbox"></div>
+    </main>
+    <script>
+
+        var touchPoints = new Array();
+
+        function parseSize(size, differential = 0){
+            //return (differential?differential-size:size)*(half?.5:1)*multiplier+"px";
+            return (differential?differential-size:size)+"px";
+        }
+
+        function drawCircle(touch){
+            var index = touch.identifier;
+            if(!touchPoints[index]) {
+                touchPoints[index] = document.createElement("dot");
+                document.getElementById("dotbox").appendChild(touchPoints[index]);
+            }
+
+            var multiplier = 500;
+
+            console.log(parseSize(size, multiplier, true, y))
+
+            touchPoints[index].style.top = touch.clientY - size * multiplier / 2 + "px";
+            touchPoints[index].style.left = touch.clientX - size * multiplier / 2 + "px";
+            touchPoints[index].style.height = touchPoints[index].style.width = size * multiplier + "px";
+            touchPoints[index].style.borderRadius = size * multiplier / 2 + "px";
+        }
+
+        var coordcontitems = new Array();
+        function touch(event){
+            console.log(event.type,event.type=="touchend")
+
+            var dotbox = document.getElementById("dotbox");
+            if(event.type=="touchend") event.changedTouches.forEach(touchPoint=>touchPoint.style.display = "none");
+            //if(event.type=="touchstart") touchPoints.forEach(touchPoint=>touchPoint.style.display = "block");
+            // if(event.type=="touchend") touchPoints = touchPoints.map(touchPoint=>{
+            //     dotbox.removeChild(touchPoint);
+            // });
+            
+
+            // switch(event.type){
+            //     case "touchend":
+            //         end = true;
+            // }
+            console.log(event)
+            event.returnValue = false;
+            var touches = event.touches;
+            for (let index = 0; index < touches.length; index++) {
+                var touch = touches[index]
+                //console.log(touch)
+                drawCircle(touch);
+            }
+        }
+        function setCoord(touch){
+            //console.log(coordcontitems)
+            if(!coordcontitems) {
+                coordcontitems = new Array();
+                var coordcontainer = document.getElementById("coordcontainer");
+                for(var properT in touch) {
+                    
+                    var element = document.createElement("p");
+                    coordcontainer.appendChild(element);
+                    coordcontitems[properT] = element;
+                }
+            }
+            for(var properT in touch) {
+                coordcontitems[properT].innerHTML = touch[properT];
+            }
+        }
+
+        document.addEventListener("mousedown", touch);
+        document.addEventListener("touchforcechange", touch);
+        document.addEventListener("touchcancel", touch);
+        document.addEventListener("touchstart", touch);
+        document.addEventListener("touchmove", touch);
+        document.addEventListener("touchend", touch);
+    </script>
+    
+    
+</body>
+</html>

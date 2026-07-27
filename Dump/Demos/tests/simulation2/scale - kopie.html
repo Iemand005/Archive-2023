@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Document</title>
+        <style>
+            html, body {
+                margin: 0;
+                height: 100%;
+                overflow: hidden;
+                touch-action: none;
+                user-select: none;
+                -webkit-touch-callout: none;
+                -webkit-user-callout: none;
+                -webkit-user-modify: none;
+                -webkit-user-drag: none;
+                -webkit-highlight: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+            dot {
+                background: green;
+                height: 100px;
+                width: 100px;
+                position: absolute;
+                border-radius: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <main onload="">
+            <div id="dotbox"></div>
+        </main>
+        <script>
+    
+            var touchPoints = new Array();
+    
+            function touch(event){
+                var dotbox = document.getElementById("dotbox");
+                if(event.changedTouches) Array.from(event.changedTouches).forEach(touch=>{
+    
+                    if(event.type=="touchstart") touchPoints[touch.identifier] = dotbox.appendChild(document.createElement("dot"));
+                    if(event.type=="touchend") dotbox.removeChild(touchPoints[touch.identifier]);
+                    touchPoint = touchPoints[touch.identifier];
+    
+                    var multiplier = 500;
+                    var touchsize = touch.radiusX**1.5;
+                    var rgbval = (touch.radiusX+touch.radiusY)**1.2+255
+                    touchPoint.style.background = `rgb(${255<rgbval?510>rgbval?rgbval%255:255:0}, ${256>rgbval?rgbval:rgbval>510?765-rgbval:255}, 0)`;
+                    touchPoint.style.top = touch.clientY - touch.force * multiplier / 2 + "px";
+                    touchPoint.style.left = touch.clientX - touch.force * multiplier / 2 + "px";
+                    touchPoint.style.height = touchPoint.style.width = touch.force * multiplier + "px";
+                    touchPoint.style.borderRadius = touch.force * multiplier / 2 + "px";
+                });
+            }
+
+            class Touch{
+                touches = new Array();
+            }
+    
+            document.addEventListener("mousedown", touch);
+            document.addEventListener("touchforcechange", touch);
+            document.addEventListener("touchcancel", touch);
+            document.addEventListener("touchstart", touch);
+            document.addEventListener("touchmove", touch);
+            document.addEventListener("touchend", touch);
+        </script>
+    </body>
+</html>

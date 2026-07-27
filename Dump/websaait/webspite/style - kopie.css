@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header > div > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div:hover > div.flyover{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    height: fit-content;
+    transition: padding 100ms;
+    padding: 10px 10px;
+}
+
+div:hover > div.flyover > a{
+    transition: padding 100ms;
+    height: auto;
+    padding: 10px;
+}
+
+header, div.flyover{
+    backdrop-filter: blur(7px);
+    background: rgba(0, 0, 0, .8);/*rgba(0, 0, 0, 0.692);*/
+}
+
+div.flyover{
+    transition: all 100ms;
+    text-align: left;
+    /*display: block;*/
+    display: flex;
+    position: relative;
+    color: white;
+    /*background-color: rgb(121, 24, 24);*/
+    padding: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+div:hover:nth-of-type(1) > .title, div:nth-of-type(1)>div.flyover{
+    background-color: rgb(56, 105, 56);
+}
+div:hover:nth-of-type(2) > .title, div:nth-of-type(2)>div.flyover{
+    background-color: rgb(56, 85, 105);
+}
+div:hover:nth-of-type(3) > .title, div:nth-of-type(3)>div.flyover{
+    background-color: rgb(98, 105, 56);
+}
+div:hover:nth-of-type(4) > .title, div:nth-of-type(4)>div.flyover{
+    background-color: rgb(105, 56, 56);
+}
+
+header{
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: fixed;
+    height: 50px;
+    backdrop-filter: blur(7px);
+    padding: 0 22px;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+}
+
+header~input#blur:checked ~ main{
+    transition: all 300ms;
+    filter: blur(0px);
+    /*filter: opacity(100%);*/
+}
+
+header:hover~input#blur:checked ~ main {
+    transition: all 5s;
+    filter: blur(3px);
+}
+footer, #blur + label{
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    z-index: 2;
+    background: red;
+    padding: 5px 5px 5px 15px;
+    border-radius: 20px 0 0 20px;
+}
+#blur{
+    display: none;
+}
+#blur + label{
+    display: none;
+    position: fixed;
+    /*margin: 100px;*/
+    transition: all 100ms;
+    right: -17px;
+    z-index: 1;
+    background-color: blue;
+}
+#blur + label:hover{
+    background-color: green;
+    right: 15px;
+}
+#blur:checked + label{
+    color: red;
+}
+
+main{
+    margin-top: 50px;
+    filter: blur(0px);
+    transition: all 1s;
+}
+
+a p{
+    margin: auto;
+}
+
+header > div{
+    display: grid;
+    color: white;
+    padding: 0;
+    text-align: center;
+    grid-template-rows: 100%;
+    user-select: none;
+    height: 50px;
+    grid-row: 0;
+}
+
+div.title:hover>a, div.flyover>a:hover{
+    background: rgba(255, 255, 255, 0.116);
+}
+
+
+
+div.title:active>a, div.flyover>a:active{
+    background: rgba(255, 255, 255, 0.185);
+}
+
+a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+

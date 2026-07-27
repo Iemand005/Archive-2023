@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        // var canvas = document.getElementById("canvas");
+        // var id = myContext.createImageData(1,1); // only do this once per page
+        // var d  = id.data;                        // only do this once per page
+        // d[0]   = r;
+        // d[1]   = g;
+        // d[2]   = b;
+        // d[3]   = a;
+        // myContext.putImageData( id, x, y ); 
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var id = ctx.getImageData(1, 1, 2, 2);
+        var pixels = id.data;
+        pixels[0] = 255;
+        pixels[1] = 255;
+        pixels[2] = 255;
+        pixels[3] = 255;
+
+        ctx.putImageData(id, 1, 1);
+    </script>
+</body>
+</html>

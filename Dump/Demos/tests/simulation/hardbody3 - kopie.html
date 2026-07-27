@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         none{
+            height:100%;
+            width:100%;
+            margin:0;
+         }
+    </style>
+</head>
+<body>
+    <canvas id="board"></canvas>
+    <script>
+        class Simulation{
+            constructor(){
+                var board = document.getElementById("board");
+                var ctx = board.getContext("2d");
+                var canvas = ctx.canvas;
+                canvas.width  = 200;
+                canvas.height = 200;
+                //ctx.canvas.width  = window.innerWidth;
+                //ctx.canvas.height = window.innerHeight;
+                var objects = new Array();
+                
+                
+                function drawBall(x, y, radius = 10, colour = "black"){
+
+                }
+                //#drawBall(10, 10, 10, "orange");
+
+                function drawLine(x1, y1, x2, y2){
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+                }
+
+                function drawVector(xv, yv, x = 0, y = 0){
+
+                }
+
+                function drawRect(x1, y1, x2, y2){
+                    ctx.beginPath();
+                    ctx.rect(x1, y1, x2, y2);
+                    ctx.stroke();
+                }
+
+                function drawBorder(){
+                    drawRect(0, 0, canvas.width, canvas.height);
+                }
+
+                function drawText(text, x=1, y=10){
+                    ctx.strokeText(text, x, y);
+                }
+
+                function resolveCollision(circle1, circle2){
+                    if(circle2!=circle1){
+                        var xdist =circle2.x-circle1.x, ydist =circle2.y-circle1.y;
+                        var distance = Math.sqrt((xdist)**2+(ydist)**2);
+                        var angle = Math.atan2(ydist, xdist);
+                        var toMove = (circle2.radius+circle1.radius - distance)/2;
+                        var xToMove = Math.cos(angle) * toMove, yToMove = Math.sin(angle) * toMove;
+                        if(distance<circle1.radius+circle2.radius)circle1.xv -= xToMove, circle1.yv -= yToMove, circle2.xv += xToMove, circle2.yv += yToMove;
+                    }
+                }
+
+                class Vector{
+                    constructor(xv, yv){
+                        this.x = 0;
+                        this.y = 0;
+                        this.xv = xv;
+                        this.yv = yv;
+                        this.sescollided = false;
+                        this.drawVector = ()=>{
+                            ctx.beginPath();
+                            ctx.moveTo(this.x, this.y);
+                            ctx.lineTo(this.x+this.xv, this.y+this.yv);
+                            ctx.stroke();
+                        }
+                        this.resolveDistances = ()=>{
+                            for (var index in objects){
+                                resolveCollision(this, objects[index]);
+                            }
+                        } 
+                    }
+                }
+
+                class Object extends Vector{
+                    constructor(){
+                        super();
+                        this.object = true;
+                    }
+                }
+                
+                class Ball extends Object{
+                    constructor(x = 0, y = 0, radius = 10, colour = "orange", xv = 0, yv = 0){
+                        super()
+                        this.x = x;
+                        this.y = y;
+                        this.xv = xv;
+                        this.yv = yv;
+                        this.radius = this.width = this.height = radius;
+                        this.left = this.x + this.width;
+                        this.right = this.x - this.width;
+                        this.top = this.y + this.height;
+                        this.bottom = this.y - this.height;
+                        this.colour = colour;
+                        //this.sescollided = false;
+                        this.draw = ()=>{
+                            ctx.beginPath();
+                            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+                            ctx.fillStyle = this.colour;
+                            ctx.fill();
+                            this.rendertime = Date.now();
+                        };
+                        this.update = ()=>{
+                            this.left = this.x - this.width;
+                            this.right = this.x + this.width;
+                            this.top = this.y - this.height;
+                            this.bottom = this.y + this.height;
+                        }
+                        this.resolveStick = function(){
+                            var stick = .8;
+                            this.yv=this.yv>0? this.yv<stick? 0: this.yv: this.yv>-stick? 0: this.yv;
+                            this.xv=this.xv>0? this.xv<stick? 0: this.xv: this.xv>-stick? 0: this.xv;
+                        }
+                        this.resolveBounds = function(){
+                            this.update();
+                            var hitbound = false;
+                            //var stick = .1;
+                            var friction = 1.2;
+                            
+                            if(this.x-this.width<1||this.width>canvas.width-1||this.y+this.height>canvas.height-1) this.resolveStick();//hitbound = true;
+                            if(this.y+this.height>canvas.height-1) hitbound = true, 
+                            
+                            this.yv /=friction//,this.yv=-this.yv;
+                            
+                            this.xv= this.x+this.width>canvas.width-1? -this.xv:this.x-this.width<1? -this.xv:this.xv;
+                            
+                            
+                            this.x = this.left<=1?1+this.width:this.right>canvas.width-1?(canvas.width-1)-this.width:this.x
+                            this.y = this.bottom>canvas.height-1?(canvas.height-1)-this.radius:this.y
+                            this.resolveDistances()
+                            if (hitbound) this.resolveStick();
+                            return hitbound;
+                        }
+
+                    }
+                }
+
+                class Cursor extends Vector{
+                    constructor(x = 0, y = 0){
+                        super();
+                        this.x = x, this.y = y;
+                        this.radius = 10;
+                        this.update = function(x, y){
+                            if(x&&y)this.x = x-this.radius/2, this.y = y-this.radius/2;
+                        }
+                        this.draw = ()=>{
+                            ctx.beginPath();
+                            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+                            ctx.fillStyle = "green";
+                            ctx.fill();
+                            this.resolveDistances()
+                            this.rendertime = Date.now();
+                        };
+                    }
+                }
+
+                function clear(){
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+
+                function updateSim(objectso = objects){
+                    objectso = objectso.map(object=>{
+                        if(object.object){
+                            var g = 9.81;
+                            var gmul = 0.05;
+                            var drag = 1.03;
+                            object.yv += g*gmul
+                            object.yv /= drag;
+                            object.xv /= drag;
+                            object.x += object.xv;
+                            object.y += object.yv;
+                            object.resolveBounds();
+                        }
+                        return object;
+                    });
+                }
+
+                this.updateSim = updateSim;
+                
+
+                function renderFrame() {
+                    clear();
+                    updateSim();
+                    drawBorder();
+                    
+                    objects.forEach(object=>{
+                        drawText(object.yv);
+                        object.draw()
+                        object.drawVector();
+                    });
+                }
+
+                this.renderFrame = renderFrame;
+                
+                this.cursor = new Cursor();
+                objects.push(this.cursor);
+
+                function randomNumberBetween(start, end){
+                    return Math.random()*(end-start)+start
+                }
+
+                function randInt(start, end){
+                    return randomNumberBetween(start, end)
+                }
+
+                function spawnRandomBalls(amount, boundx, boundy){
+                    for (let i = 0; i < amount; i++) {
+                        objects.push(new Ball(randInt(1,boundx),randInt(1,boundx),randInt(10,30)));
+                    }
+                }
+
+                function initSim(){
+                    spawnRandomBalls(10, canvas.width, canvas.height);
+                }
+                
+                this.start = initSim;
+            }
+        }
+        
+        simulation = new Simulation();
+        simulation.start();
+        var fps = 60;
+        window.setInterval(simulation.renderFrame, 1000/fps)
+        window.addEventListener("mousemove", event=>{
+            simulation.cursor.update(event.x, event.y);
+        })
+        window.addEventListener("click", event=>{
+            simulation.cursor.update(event.x, event.y);
+        })
+        
+    </script>
+</body>
+</html>

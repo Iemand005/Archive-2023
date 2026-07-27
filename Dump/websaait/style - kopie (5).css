@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 5px 5px 15px rgb(0 0 0 / 30%);
+}
+
+body {
+    background: #F5E8B7;
+}
+
+button { 
+    width: 72px;
+    height: 38px;
+    position: absolute;
+    top: 121px;
+    left: 82px;
+    backdrop-filter: blur(13px);
+    background: #0000004d;
+    border: 0;
+    border-top: #ffffff57 solid 1px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 100;
+}
+
+button:hover{
+    background: #2e2e2e4d;
+}
+
+button:active{
+    background: #5a5a5a4d;
+    border: 0;
+    border-bottom: #1d1d1d57 solid 1px;
+}
+
+tabs input {
+    display: none;
+}
+
+h1 {
+    background-color: #CD5C08;
+    display: flex;
+    justify-content: center;
+    color: #F5E8B7;
+    
+    padding: 12px;
+}
+
+tabs {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(#CD5C08 10px, #F5E8B7 0%);
+}
+
+tabs label {
+    flex: 0 0 33.333333%;
+    text-align: center;
+    padding: 12px 0;
+}
+
+tabs #tab1:checked ~ label:nth-of-type(1){
+    /*/color:orangered;*/
+	background:#F5E8B7;
+    color:#CD5C08;
+    border-radius: 0px 10px 0 0;
+}
+
+tabs #tab1:checked ~ label:nth-of-type(2){
+    border-radius: 10px 10px 0 10px;
+}
+
+tabs #tab1:checked ~ label:nth-of-type(3){
+    border-radius: 10px 0 0 0;
+}
+
+tabs #tab2:checked ~ label:nth-of-type(1){
+    border-radius: 0 10px 10px 0;
+}
+
+tabs #tab2:checked ~ label:nth-of-type(2){
+	background:#F5E8B7;
+    color:#CD5C08;
+    border-radius: 10px 10px 0 0;
+}
+
+tabs #tab2:checked ~ label:nth-of-type(3){
+    border-radius: 10px 0 0 10px;
+}
+
+tabs #tab3:checked ~ label:nth-of-type(1){
+    border-radius: 0 10px 0 0;
+}
+
+tabs #tab3:checked ~ label:nth-of-type(2){
+    border-radius: 10px 10px 10px 0;
+}
+
+tabs #tab3:checked ~ label:nth-of-type(3){
+	background:#F5E8B7;
+    color:#CD5C08;
+    border-radius: 10px 0 0 0;
+}
+
+#tab1 ~ label:hover{
+    background:#c55a07;
+}
+
+input:checked ~ label{
+    background: #CD5C08;
+	color:#F5E8B7;
+    transition: background-color 1000ms linear;
+    transition: border-radius 1000ms linear;
+    transition: color 1000ms linear;
+}
+
+input ~ label{
+    background: #CD5C08;
+	color:#F5E8B7;
+    transition: background-color 1000ms linear;
+    transition: border-radius 1000ms linear;
+}
+
+input#tab1:checked ~ tab:not(:nth-of-type(1)), input#tab2:checked ~ tab:not(:nth-of-type(2)), input#tab3:checked ~ tab:not(:nth-of-type(3)) {
+    display: none;
+}

@@ -1,0 +1,24 @@
+button { 
+    width: 72px;
+    height: 38px;
+    position: absolute;
+    top: 121px;
+    left: 82px;
+    backdrop-filter: blur(13px);
+    background: #0000004d;
+    border: 0;
+    border-top: #ffffff57 solid 1px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 100;
+}
+
+button:hover{
+    background: #2e2e2e4d;
+}
+
+button:active{
+    background: #5a5a5a4d;
+    border: 0;
+    border-bottom: #1d1d1d57 solid 1px;
+}

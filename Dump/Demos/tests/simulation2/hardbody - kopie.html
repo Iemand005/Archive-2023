@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         none{
+            height:100%;
+            width:100%;
+            margin:0;
+         }
+    </style>
+</head>
+<body>
+    <canvas id="board"></canvas>
+    <script>
+        class Simulation{
+            constructor(){
+                var board = document.getElementById("board");
+                var ctx = board.getContext("2d");
+                var canvas = ctx.canvas;
+                canvas.width  = 200;
+                canvas.height = 200;
+                //ctx.canvas.width  = window.innerWidth;
+                //ctx.canvas.height = window.innerHeight;
+                var objects = new Array();
+                function drawBall(x, y, size = 10, colour = "black"){
+                    ctx.beginPath();
+                    ctx.arc(x, y, 10, 0, 2 * Math.PI);
+                    ctx.fillStyle = colour;
+                    ctx.fill();
+                }
+                //#drawBall(10, 10, 10, "orange");
+                function drawVector(xv, yv, x = 0, y = 0){
+                    ctx.beginPath();
+                    ctx.moveTo(x, y);
+                    ctx.lineTo(x+xv, y+yv);
+                    ctx.stroke();
+                }
+
+                function drawRect(x1, y1, x2, y2){
+                    ctx.beginPath();
+                    ctx.rect(x1, y1, x2, y2);
+                    ctx.stroke();
+                }
+
+                function drawBorder(){
+                    drawRect(0, 0, canvas.width, canvas.height);
+                }
+
+                class Vector{
+                    constructor(x, y){
+                        this.x = x;
+                        this.y = y;
+                        this.drawVector = drawVector(this.x, this.y);
+                    }
+                }
+
+                class Ball extends Vector{
+                    constructor(x = 0, y = 0, size = 10, colour = "orange"){
+                        super()
+                        this.x = x;
+                        this.y = y;
+                        this.xv = 0;
+                        this.yv = 0;
+                        this.size = size;
+                        this.colour = colour;
+                        this.draw = drawBall(this.x, this.y, this.size, this.colour);
+                        this.drawVector = drawVector(this.xv, this.yv, this.x, this.y);
+                    }
+                }
+
+                function renderFrame(){
+                    drawBorder();
+                    objects.forEach(object=>object.draw());
+                }
+
+                function updateSim(objects){
+                    // for(var index in objects){
+                    //     object = objects[index];
+                    //     var g = 9.81;
+                    //     var gmul = 0.1;
+                    //     var drag = 1;
+                    //     object.xv += (g-drag)*gmul;
+                    //     object.x += object.xv;
+                    //     object.y += object.yv;
+                    // }
+                    objects = objects.map(object=>{
+                        var g = 9.81;
+                        var gmul = 0.1;
+                        var drag = 1;
+                        object.xv += (g-drag)*gmul;
+                        object.x += object.xv;
+                        object.y += object.yv;
+                        return object;
+                    });
+                    console.log(objects)
+                    renderFrame(objects)
+                }
+
+                
+                
+
+                function initSim(){
+                    objects.push(new Ball(10, 10, 10, "orange"));
+                    var fps = 1;
+                    window.setInterval(updateSim(objects), 1000/60);
+                }
+
+                
+
+                //initSim();
+                //drawVector(10, 50);
+                this.start = initSim();
+            }
+        }
+        new Simulation().start();
+    </script>
+</body>
+</html>

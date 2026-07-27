@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*
+div#ribbon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    width: 100%;
+}*/
+/*
+div.flyover{
+    display: none;
+    height: 0;
+    width: 0;
+    grid-column: span;
+    background-color: purple;
+    /*display: grid;*//*
+    grid-template-columns: 1fr 1fr 1fr;
+    color: red;
+}*/
+/*
+div.flyover{
+    display: none;
+    height: 0;
+    width: 0;
+}*/
+
+a:hover > div.flyover{
+    display: block;
+    position: relative;
+}
+
+/*a > div.flyover{
+    display: block;
+    position: relative;
+    color: rebeccapurple;
+}*/
+
+div.flyover{
+    text-align: left;
+    display: block;
+    position: relative;
+    color: brown;
+    background-color: black;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    /*width: 100%;*/
+    height: 50px;
+    background: rgba(0, 0, 0, 0.589);
+    backdrop-filter: blur(7px);
+    padding: 0 22px;
+    left: 0;
+    right: 0;
+}
+
+a p{
+    margin: auto;
+    vertical-align: middle;
+}
+/*
+a{
+    text-align: center;
+    display: grid;
+    grid-template-rows: 100% 1fr;
+    backdrop-filter: blur(0px);
+    color: white;
+    padding: 5px;
+    user-select: none;
+}
+
+a{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(0px);
+    color: white;
+    padding: 5px;
+    user-select: none;
+}*//*
+
+a {
+    display: grid;
+    /* justify-content: center; */
+    /* align-items: center; *//*/
+    text-align: center;
+    backdrop-filter: blur(0px);
+    color: white;
+    /* padding: 5px; /*//*/
+    user-select: none;
+    grid-template-columns: 100%;
+    padding: 0;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 100% 1fr;
+    backdrop-filter: blur(0px);
+    color: white;
+    padding: 5px;
+    user-select: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(0px);
+    color: white;
+    padding: 5px;
+    user-select: none;
+}*/
+
+header > a{
+    display: grid;
+    color: white;
+    /*/grid-template-columns: 100%;/*/
+    padding: 0;
+    text-align: center;
+    /*grid-template-rows: 100% 1fr;/*/
+    grid-template-rows: 100%;
+    user-select: none;
+    height: 50px;
+}
+
+a:hover{
+    background: rgba(255, 255, 255, 0.116);
+    color: green;
+}
+
+a:active{
+    background: rgba(255, 255, 255, 0.185);
+    color: red;
+}
+
+footer{
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    background: red;
+    /* border-radius: 50%  0  0 50%; */
+    padding: 5px 5px 5px 15px;
+    /* border: 10px solid green; */
+    /* box-shadow: 0 0 0 3px black, 0 0 0 1px white inset; */
+    /* border-left: 9px solid #888; */
+    border-radius: 50px 0 0 50px;
+
+}

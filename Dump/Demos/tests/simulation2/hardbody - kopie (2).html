@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         none{
+            height:100%;
+            width:100%;
+            margin:0;
+         }
+    </style>
+</head>
+<body>
+    <canvas id="board"></canvas>
+    <script>
+        class Simulation{
+            constructor(){
+                var board = document.getElementById("board");
+                var ctx = board.getContext("2d");
+                var canvas = ctx.canvas;
+                canvas.width  = 200;
+                canvas.height = 200;
+                //ctx.canvas.width  = window.innerWidth;
+                //ctx.canvas.height = window.innerHeight;
+                var objects = new Array();
+                function drawBall(x, y, size = 10, colour = "black"){
+
+                }
+                //#drawBall(10, 10, 10, "orange");
+                function drawVector(xv, yv, x = 0, y = 0){
+
+                }
+
+                function drawRect(x1, y1, x2, y2){
+                    ctx.beginPath();
+                    ctx.rect(x1, y1, x2, y2);
+                    ctx.stroke();
+                }
+
+                function drawBorder(){
+                    drawRect(0, 0, canvas.width, canvas.height);
+                }
+
+                function drawText(text, x=1, y=10){
+                    ctx.strokeText(text, x, y);
+                }
+
+                class Vector{
+                    constructor(xv, yv){
+                        this.x = 0;
+                        this.y = 0;
+                        this.xv = xv;
+                        this.yv = yv;
+                        this.drawVector = ()=>{
+                            ctx.beginPath();
+                            ctx.moveTo(this.x, this.y);
+                            ctx.lineTo(this.x+this.xv, this.y+this.yv);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                
+                class Ball extends Vector{
+                    constructor(x = 0, y = 0, size = 10, colour = "orange"){
+                        super()
+                        this.x = x;
+                        this.y = y;
+                        this.xv = 0;
+                        this.yv = 0;
+                        this.rxv = 0;
+                        this.ryv = 0;
+                        this.size = size;
+                        this.height = size;
+                        this.colour = colour;
+                        this.rendertime = Date.now();
+                        this.draw = ()=>{
+                            ctx.beginPath();
+                            ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+                            ctx.fillStyle = this.colour;
+                            ctx.fill();
+                            this.rendertime = Date.now();
+                        };
+                        this.resolveBounds = function(){
+                            var hitbound = false;
+                            var stick = 2.4;
+                            var bouncev = -(this.yv-.1)
+                            if(this.y+this.height>canvas.height) hitbound = true, 
+                            
+                            //console.log(this.yv)
+                            
+                            this.yv=this.yv>0? this.yv<stick? 0: bouncev: this.yv>-stick? 0: bouncev;//this.yv=0, this.y = 0;
+                            //var cow = 0>1?true:false;
+                            return hitbound;
+                        }
+                    }
+                }
+
+                function clear(){
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+
+                function renderFrame(){
+                    clear();
+                    drawBorder();
+                    objects.forEach(object=>{
+                        drawText(object.yv);
+                        object.draw();
+                        object.drawVector();
+                    });
+                }
+
+                this.updateSim = function(objectso = objects){
+                    // for(var index in objects){
+                    //     object = objects[index];
+                    //     var g = 9.81;
+                    //     var gmul = 0.1;
+                    //     var drag = 1;
+                    //     object.xv += (g-drag)*gmul;
+                    //     object.x += object.xv;
+                    //     object.y += object.yv;
+                    // }
+                    objectso = objectso.map(object=>{
+                        
+                        var g = 9.81;
+                        var gmul = -0.005;
+                        var drag = -0.015;
+                        var timediff = object.rendertime - Date.now();
+                        //var stick = 1
+                        //if(!){
+                            //object.yv += (g)*gmul;
+                        //}
+                        //if(object.yv>0)object.yv -= drag;
+                        //else object.yv += drag
+                        
+                        //object.yv += g*gmul*timediff;
+                        object.yv += (g*gmul + ((object.yv+g*gmul)>0?-drag:drag))*timediff//(g*gmul + object.yv>0?-drag:drag)//*//(currenttime)
+                        object.resolveBounds();
+                        object.x += object.xv;
+                        object.y += object.yv;
+                    
+                        return object;
+                    });
+                    //console.log(objectso)
+                    renderFrame(objectso)
+                }
+
+                
+                
+
+                function initSim(){
+                    objects.push(new Ball(90, 50, 10, "orange"));
+                    
+                    
+                }
+
+                
+
+                //initSim();
+                //drawVector(10, 50);
+                this.start = initSim;
+            }
+        }
+        simulation = new Simulation();
+        simulation.start();
+        var fps = 60;
+        window.setInterval(simulation.updateSim, 1000/fps)
+    </script>
+</body>
+</html>
