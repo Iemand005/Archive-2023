@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/Lasse/Downloads/full-page-tabs.html -->
+<html lang="en"><head>
+	<meta name="description" content="KAKA">
+	<meta name="theme-color" content="#ffffff">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>HowToCreate Series | Menu | Full Page Tabs</title>
+	
+
+	<!-- To ensure proper rendering and touch zooming in Mobile Phones -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		{
+			box-sizing: border-box
+		}
+
+		/* Set height of body and the document to 100% */
+		body, html {
+		    height: 100%;
+		    margin: 0;
+		    font-family: Arial;
+		}
+
+		/* Style tab links */
+		.tablink {
+		    background-color: #555;
+		    color: white;
+		    float: left;
+		    border: none;
+		    outline: none;
+		    cursor: pointer;
+		    padding: 14px 16px;
+		    font-size: 17px;
+		    width: 25%;
+		}
+
+		.tablink:hover {
+		    background-color: #777;
+		}
+
+		/* Style the tab content (and add height:100% for full page content) */
+		.tabcontent {
+		    color: white;
+		    display: none;
+		    padding: 100px 20px;
+		    height: 100%;
+		}
+
+		#Tab1 {
+			background-color: #4285f4;
+		}
+
+		#Tab2 {
+			background-color: #ea4335;
+		}
+
+		#Tab3 {
+			background-color: #fbbc05;
+		}
+
+		#Tab4 {
+			background-color: #34a853;
+		}
+	</style>
+</head>
+<body>
+
+	<button class="tablink" onclick="openPage(&#39;Tab1&#39;, this, &#39;#4285f4&#39;);C1();" style="">Tab1</button>
+	<button class="tablink" onclick="openPage(&#39;Tab2&#39;, this, &#39;#ea4335&#39;);C2();" style="">Tab2</button>
+	<button class="tablink" onclick="openPage(&#39;Tab3&#39;, this, &#39;#fbbc05&#39;);C3();" style="">Tab3</button>
+	<button class="tablink" onclick="openPage(&#39;Tab4&#39;, this, &#39;#34a853&#39;);C4();" style="">Tab4</button>
+	
+	<div onclick="openPage(&#39;None&#39;, this, &#39;#34a853&#39;)" id="defaultOpen"></div>
+	<div id="None"></div>
+	
+	<script>
+	function C1() {
+	 document.querySelector("[name='theme-color']").remove()
+	 var m = document.createElement('meta'); 
+	 m.name = 'theme-color'; 
+	 m.content = '#4285f4'; 
+	 document.head.appendChild(m);
+	}
+	</script>
+	<script>
+	function C2() {
+	 document.querySelector("[name='theme-color']").remove()
+	 var m = document.createElement('meta'); 
+	 m.name = 'theme-color'; 
+	 m.content = '#ea4335'; 
+	 document.head.appendChild(m);
+	}
+	</script>
+	<script>
+	function C3() {
+	 document.querySelector("[name='theme-color']").remove()
+	 var m = document.createElement('meta'); 
+	 m.name = 'theme-color'; 
+	 m.content = '#fbbc05'; 
+	 document.head.appendChild(m);
+	}
+	</script>
+	<script>
+	function C4() {
+	 document.querySelector("[name='theme-color']").remove()
+	 var m = document.createElement('meta'); 
+	 m.name = 'theme-color'; 
+	 m.content = '#34a853'; 
+	 document.head.appendChild(m);
+	}
+	</script>
+	
+	<div id="Tab1" class="tabcontent" style="display: none;">
+	<h3>Tab1</h3>
+	<p>Text1</p>
+	</div>
+
+	<div id="Tab2" class="tabcontent" style="display: none;">
+	<h3>Tab2</h3>
+	<p>Text2</p>
+	</div>
+
+	<div id="Tab3" class="tabcontent" style="display: none;">
+	<h3>Tab3</h3>
+	<p>Text3</p>
+	</div>
+
+	<div id="Tab4" class="tabcontent" style="display: none;">
+	<h3>Tab4</h3>
+	<p>Text4</p>
+	</div>
+
+	<script>
+	function openPage(pageName,elmnt,color) {
+	    var i, tabcontent, tablinks;
+	    tabcontent = document.getElementsByClassName("tabcontent");
+	    for (i = 0; i < tabcontent.length; i++) {
+	        tabcontent[i].style.display = "none";
+	    }
+	    tablinks = document.getElementsByClassName("tablink");
+	    for (i = 0; i < tablinks.length; i++) {
+	        tablinks[i].style.backgroundColor = "";
+	    }
+	    document.getElementById(pageName).style.display = "block";
+	    elmnt.style.backgroundColor = color;
+
+	}
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+	</script>
+     
+
+ </body></html>

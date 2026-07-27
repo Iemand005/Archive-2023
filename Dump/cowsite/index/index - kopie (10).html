@@ -26,30 +26,27 @@
         intervalId = false;
         gravityElements = new Array();
         
-        function getAccelerometer(){
-            DeviceMotionEvent.requestPermission().then(response => {
-                if (response == 'granted') {
-                    var metainfo = document.getElementById("metainformation");
-                    window.addEventListener('deviceorientation',(event) => {
-                        rotation = event.alpha;
-                        frontToBack = event.beta;
-                        leftToRight = event.gamma;
-                        metainfo.innerHTML = `Acceleration along the X-axis ${rotation} Y-axis ${frontToBack} Z-axis ${leftToRight}`;
-                    });
-                }
-            });
-        }
+        const acl = new Accelerometer({ frequency: 60 });
+        var metainfo = document.getElementById("metainformation");
+        acl.addEventListener("reading", () => {
+            metainfo.innerHTML = `Acceleration along the X-axis ${acl.x} Y-axis ${acl.y} Z-axis ${acl.z}`;
+        });
+
+        acl.start();
 
 
         function initializeGravity(){
-            getAccelerometer();
             //document.getElementById("stretchtoframe").checked = true;
         }
 
-        fullwindow = true;
+        /*use*/fullwindow = true;
         
         function toggleFullWindow(){
             fullwindow = event.target.checked;
+            /*/var gravityBox = document.getElementById("gravityBox");
+            if(event.target.checked) fullwindow = true;//gravityBox.style.height = window.innerHeight - gravityBox.getBoundingClientRect().top;
+            else //gravityBox.style.height = "100%";
+            /*/
         }
 
         function toggleGravity(event) {
@@ -196,13 +193,12 @@
         <div id="gravityBox">
             <h1 class="gravityField">Wat zoek je?</h1>
             <ol class="gravityField">
-                <li><a href="introHTML">introHTML</a></li>
+                <li><a href="/introHTML">introHTML</a></li>
                 <li><a href="/Demo/MPTool">MPTool Minimal</a></li>
                 <li><a href="/Demo/Colourful.html">Colourful Tabs</a></li>
                 <li><a href="/Demo/touch.html">touch properties</a></li>
                 <li><a href="/Demo/Cake">3D Cake and Win10 reveal demo</a></li>
                 <li><a href="https://discord.gg/fU98qptK">Discord server</a></li>
-                <li><a href="/Demo/tapper.html">Tapper</a></li>
             </ol>
             <div class="btr">
             <label for="gravitytoggle">Zwaartekracht</label><input id="gravitytoggle" type="checkbox" onchange="toggleGravity(event)">

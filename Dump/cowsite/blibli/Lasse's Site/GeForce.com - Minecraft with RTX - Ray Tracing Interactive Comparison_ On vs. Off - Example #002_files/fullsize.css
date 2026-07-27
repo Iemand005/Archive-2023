@@ -1,0 +1,53 @@
+@CHARSET "utf-8";
+body{
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+   	font-size: 13px;
+   	color:#efefef;
+   	background-color:#282B30;
+}
+#gpu-analyzer-comparison-images {
+	width:1920px;
+	margin:0 auto;
+}
+#gpu-analyzer-comparison-images .overlay {
+	background-image:url(bg_shade.png);
+	padding:8px;
+	border-bottom:1px solid #999;
+	border-left:1px solid #333;
+	border-right:1px solid #333;
+}
+#lt-overlay {
+	display:block;
+	width:250px;
+	position:absolute; 
+	bottom:810px; 
+	/*left:-280px;*/
+	font-size:14px;
+	line-height:1em;
+	color:#efefef;
+	text-align:center;
+	z-index:100;
+}
+#rt-overlay {
+	display:block;
+	width:250px;
+	position:absolute; 
+	bottom:810px; 
+	/*left:15px;*/
+	font-size:14px;
+	line-height:1em;
+	color:#efefef;
+	text-align:center;
+	z-index:100;
+}
+#prompt { 
+	display:block;
+	z-index:100;
+	position:absolute; 
+	color:#efefef;
+	top:10px;
+	width:175px;
+	left:701px;
+	text-align:center;
+	font-size:15px;
+}

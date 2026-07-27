@@ -1,0 +1,106 @@
+/*
+PureDark
+-------
+A simple CSS base for UI styling for simple tools 
+(C) Candela 2021 / MIT 
+Template Version: OreUI inspired
+*/
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #242425;
+    color: #FFFFFF;
+}
+
+a{
+    color: #FFFFFF;
+    animation-name: textfade;
+    animation-duration: 0.7s;
+}
+
+.tile{
+    /* Slightly lighter color as it's forground */
+    background-color: #313233;
+    /* Shadow to sell the lifted card look */
+    box-shadow: 0 0 10px #0C0D0F;
+    /* other stuff */
+    /* text-align: center; */
+    color: #FFFFFF;
+    /* Size */
+    /* width: 500px;
+    height: 300px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    /* animation-name: zoom;
+    animation-duration: 0.7s; */
+    
+}
+
+.banner{
+    /* Slightly lighter color as it's forground */
+    background-color: #313233;
+    /* Shadow to sell the lifted card look */
+    box-shadow: 0 0 10px #0C0D0F;
+    /* other stuff */
+    text-align: center;
+    color: #FFFFFF;
+    /* Size */
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.tile:hover{
+    background-color: #48494a;
+}
+
+
+.flexrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+get {
+    display: block;
+    width: 100%;
+    height: 70%;
+}
+
+#image {
+    width: 50%;
+}
+
+
+#searchresults {
+    /*Undid this since the wrapping was kinda wonky*/
+    /* display: grid;
+    width: 100%;
+    grid-template-columns:auto auto auto; */
+}
+
+
+button {
+    background-color: #3c8527; /* Primary Button Type from CoUi */
+    border-radius: 4px;
+    border: none;
+    color: white;
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid 3a3a3b;
+    text-align: left;
+    padding: 8px;
+  }
+  

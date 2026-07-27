@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main onload="">
+        <div id="coordcontainer"></div>
+    </main>
+    <script>
+/*         function touchEvent(event){
+
+            switch(touchmove){
+                case "touchmove"
+            }
+            //console.log(event);
+        } */
+
+        function mouseDown(){
+
+        }
+
+        function touch(event){
+            //console.log(event.touches)
+            //event.touches.forEach(touch=>console.log(touch))
+            var touches = event.touches;
+            for (let index = 0; index < touches.length; index++) {
+                console.log(touches[index])
+            }
+        }
+
+        const coordcont = document.getElementById("coordcontainer");
+
+        function setCoord(){
+            
+        }
+
+        // function setup(){
+        //     document.getElementById("coordcontainer")
+        // }
+
+        document.addEventListener("mousedown", mouseDown);
+        document.addEventListener("touchstart", touch);
+        document.addEventListener("touchmove", touch);
+        document.addEventListener("touchend", touch);
+    </script>
+    
+    
+</body>
+</html>

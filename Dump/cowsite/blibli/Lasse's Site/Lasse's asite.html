@@ -1,0 +1,170 @@
+<html><head>
+	<title>Lasse</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="KAKA">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		{
+			box-sizing: border-box
+		}
+		body, html {
+			background-color: #555;
+		    height: auto;
+		    margin: 0;
+		    font-family: Arial;
+		}
+		.tablink {
+		    background-color: #555;
+		    color: white;
+		    float: left;
+		    border: none;
+		    outline: none;
+		    cursor: pointer;
+		    padding: 14px 16px;
+		    font-size: 17px;
+		    width: 25%;
+		}
+		.tablink:hover {
+		    background-color: #777;
+		}
+		.tabcontent {
+		    color: white;
+		    display: none;
+		    padding: 100px 20px;
+		    height: calc(100% - 200px);
+		}
+		#Tab1 {
+			background-color: #4285f4;
+		}
+		#Tab2 {
+			background-color: #ea4335;
+		}
+		#Tab3 {
+			background-color: #fbbc05;
+		}
+		#Tab4 {
+			background-color: #34a853;
+		}
+		#rc1 {
+		border-radius: 10px;
+		margin-top: -30px;
+		margin-left: -1px;
+		margin-bottom: -1px;
+		background: #659df4;
+		padding: 10px; 
+		width: calc(100% - 18px);
+		height: 120%;  
+		}
+		#rc2 {
+		border-radius: 10px;
+		margin-top: -30px;
+		margin-left: -1px;
+		background: #ed695c;
+		padding: 10px; 
+		width: calc(100% - 18px);
+		height: 120%;  
+		}
+		#rc3 {
+		border-radius: 10px;
+		margin-top: -30px;
+		margin-left: -1px;
+		background: #f9ca36;
+		padding: 10px; 
+		width: calc(100% - 18px);
+		height: 120%;  
+		}
+		#rc4 {
+		border-radius: 10px;
+		margin-top: -30px;
+		margin-left: -1px;
+		background: #5cb973;
+		padding: 10px; 
+		width: calc(100% - 18px);
+		height: 120%;  
+		}
+		.dot {
+		pointer-events: none;
+		margin-top: 15px;
+		height: 15px;
+		width: 15px;
+		position: absolute;
+		z-index: 10;
+		border-radius: 50%;
+		display: inline-block;
+		}
+		.dot1 {
+		margin-left: calc(12.5% - 36px);
+		background-color: #4285f4;
+		}
+		.dot2 {
+		margin-left: calc(37.5% - 36px);
+		background-color: #ea4335;
+		}
+		.dot3 {
+		margin-left: calc(62.5% - 36px);
+		background-color: #fbbc05;
+		}
+		.dot4 {
+		margin-left: calc(87.5% - 36px);
+		background-color: #34a853;
+		}
+	</style>
+</head>
+<body>
+	<span class="dot dot1"></span>
+	<span class="dot dot2"></span>
+	<span class="dot dot3"></span>
+	<span class="dot dot4"></span>
+	<button class="tablink" onclick="openPage(&#39;Tab1&#39;, this, &#39;#4285f4&#39;);T(&#39;#4285f4&#39;, this);" style="">Tab1</button>
+	<button class="tablink" onclick="openPage(&#39;Tab2&#39;, this, &#39;#ea4335&#39;);T(&#39;#ea4335&#39;, this);" style="">Tab2</button>
+	<button class="tablink" onclick="openPage(&#39;Tab3&#39;, this, &#39;#fbbc05&#39;);T(&#39;#fbbc05&#39;, this);" style="">Tab3</button>
+	<button class="tablink" onclick="openPage(&#39;Tab4&#39;, this, &#39;#34a853&#39;);T(&#39;#34a853&#39;, this);" style="">Tab4</button>
+	
+	<div onclick="openPage(&#39;None&#39;, this, &#39;#34a853&#39;)" id="defaultOpen"></div>
+	<div id="None"></div>
+	
+	<script>
+	function T(c) {
+	 document.querySelector("[name='theme-color']").remove()
+	 var m = document.createElement('meta'); 
+	 m.name = 'theme-color'; 
+	 m.content = c; 
+	 document.head.appendChild(m);
+	}
+	</script>
+	
+	<div id="Tab1" class="tabcontent" style="display: none;">
+	<div id='rc1'></div>
+	</div>
+
+	<div id="Tab2" class="tabcontent" style="display: none;">
+	<div id='rc2'></div>
+	</div>
+
+	<div id="Tab3" class="tabcontent" style="display: none;">
+	<div id='rc3'></div>
+	</div>
+
+	<div id="Tab4" class="tabcontent" style="display: none;">
+	<div id='rc4'></div>
+	</div>
+
+	<script>
+	function openPage(pageName,elmnt,color) {
+	    var i, tabcontent, tablinks;
+	    tabcontent = document.getElementsByClassName("tabcontent");
+	    for (i = 0; i < tabcontent.length; i++) {
+	        tabcontent[i].style.display = "none";
+	    }
+	    tablinks = document.getElementsByClassName("tablink");
+	    for (i = 0; i < tablinks.length; i++) {
+	        tablinks[i].style.backgroundColor = "";
+	    }
+	    document.getElementById(pageName).style.display = "block";
+	    elmnt.style.backgroundColor = color;
+	}
+	document.getElementById("defaultOpen").click();
+	</script>
+
+ </body></html>

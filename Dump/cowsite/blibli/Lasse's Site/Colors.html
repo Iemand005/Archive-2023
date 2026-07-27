@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<Title>Colors</Title>
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#ffffff">
+	<style>
+    body
+    {
+        margin: 0;
+        padding: 0;
+        animation: color infinite 10s;
+    }
+    @keyframes color{
+        0%
+        {
+            --color: #e74c3c;
+        }
+        20%
+        {
+            --color: #2980b9;
+        }
+        40%
+        {
+            --color: #f1c40f;
+        }
+        60%
+        {
+            --color: #8e44ad;
+        }
+        80%
+        {
+            --color: #34495e;
+        }
+        100%
+        {
+            --color: #e74c3c;
+        }	
+	</style>
+</head>
+<body style="background-color:var(--color);">
+	<button class="tablink" onclick="openPage(&#39;Tab4&#39;, this, &#39;#34a853&#39;);T(&#39;var(--color)&#39;, this);" style="">Tab4</button>
+	
+	<div onclick="openPage(&#39;None&#39;, this, &#39;#34a853&#39;)" id="defaultOpen"></div>
+	<div id="None"></div>
+	
+	<script>
+	function T(c) {
+	 document.querySelector("[name='theme-color']").remove()
+	 var m = document.createElement('meta'); 
+	 m.name = 'theme-color'; 
+	 m.content = c; 
+	 document.head.appendChild(m);
+	}
+	</script>
+	
+	<div id="Tab1" class="tabcontent" style="display: none;">
+	<div id='rc1'></div>
+	</div>
+
+	<div id="Tab2" class="tabcontent" style="display: none;">
+	<div id='rc2'></div>
+	</div>
+
+	<div id="Tab3" class="tabcontent" style="display: none;">
+	<div id='rc3'></div>
+	</div>
+
+	<div id="Tab4" class="tabcontent" style="display: none;">
+	<div id='rc4'></div>
+	</div>
+
+	<script>
+	function openPage(pageName,elmnt,color) {
+	    var i, tabcontent, tablinks;
+	    tabcontent = document.getElementsByClassName("tabcontent");
+	    for (i = 0; i < tabcontent.length; i++) {
+	        tabcontent[i].style.display = "none";
+	    }
+	    tablinks = document.getElementsByClassName("tablink");
+	    for (i = 0; i < tablinks.length; i++) {
+	        tablinks[i].style.backgroundColor = "";
+	    }
+	    document.getElementById(pageName).style.display = "block";
+	    elmnt.style.backgroundColor = color;
+	}
+	document.getElementById("defaultOpen").click();
+	</script>
+</body>
+</html>

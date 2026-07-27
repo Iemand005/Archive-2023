@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body onload="getpfid()">
+    <div class="banner">
+        <div>
+        <h1 style="display: inline-block;">MPToolbox</h1>
+        <img style="max-height:100px; max-width:100px; float:left;" src="icon.png">
+    </div>
+    </div>
+	<h3> Tool Settings </h3>
+	<div class="tile">
+        <div>
+		    <input id="XboxToken"></input>
+		    <button onclick="RenewEntityToken()">Xbox to EntityToken</button>
+		    <input id="EntityToken"></input>
+		    <button onclick="SetEntityToken()">Set EntityToken</button><div id="ES"></div>
+        </div>
+        <br/>
+        <div>
+            <b> Playfab ID </b>
+            <select name="20CA2" id="playfabid" onchange="getpfid()">
+                <option value="20CA2">20CA2 (Bedrock/Prod)</option>
+                <option value="EE7B">EE7B (Bedrock/Dev)</option>
+                <option value="6855F">6855F (Education/Prod)</option>
+                <option value="28FAE">28FAE (Education/Dev)</option>
+                <option value="C836E">C836E (Dungeons/Prod)</option>
+                <option value="4563">4563 (Dungeons/Dev)</option>
+            </select>
+        </div>
+	</div>
+	<h3> Get Item Details </h3>
+	<div class="tile">
+		<get>
+			<input id="id" value="fb951806-69ce-46de-b5ac-7ecb1f93b56f"></input>
+			<button onclick="GetMarketplaceItem(document.getElementById('id').value)">Load</button>&nbsp;&nbsp;<button onclick="PurchaseItem()">Buy</button>
+			<div id="code"></div>
+			<div id="minecoin" style="display: none;">
+			<div style="white-space: nowrap;">
+				<div id="price" style="display: inline-block;"></div><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAsAAAALBAMAAABbgmoVAAAAHlBMVEUAAAD/3BZAKAPMmRWxeBg8JAD//M3/4mP//tlOLwmQQgkaAAAAAXRSTlMAQObYZgAAAENJREFUCNdjYGBSUmIAArW0NAUgp1G8vIiBQUNYULhQgUFR2NBYEEQJCyNRQDkRBQZOQUFBJ6C+EBcXBSDFGhrKwAAAUvUIYFSGUJAAAAAASUVORK5CYII="></div>
+			<div id="name"></div>
+			<div id="image"></div>
+			<br/>
+			<div id="CreationDate"></div>
+			<div id="LastModifiedDate"></div>
+			<div id="StartDate"></div>
+			<div id="Description"></div>
+			<div id="creatorName"></div>
+			<br/> <b> Contents: </b>
+			<div id="download"></div>
+			</div>
+		</get>
+	</div>
+	<button onclick="GetInventory()">Get Inventory</button>
+	<h3> Search </h3>
+	<search class="tile">
+		<input id="search"></input>
+		<button onclick="SearchMarketplace()">Search</button><button onclick="result('searchresults','')">Clear</button><button onclick="download()">Download</button>
+		<input type="checkbox" id="filter_free">Free</input>
+        <input type="checkbox" id="use_custom_filter" onclick="filter(this)">Use Custom Filter:</input>
+		
+        <input id="cfilter" value="(tags/any(t: t eq 'tag.cape'))"></input>
+		<b id="sprogress"></b>
+		<b id="sprogress_ico"></b>
+	</search>
+	
+    <!--Some good ol brs to space things out a smidgen-->
+    <br/><br/><br/>
+    <div class="tile">
+		<div id="searchresults">
+			<table id="searchresulttable"> <tr> <th> Thumbnail </th> <th> Name (ID) </th> <th> Creator (ID) </th> <th> Type </th> <th> Open in MKTPL </th> </tr>
+			
+			</table>
+		</div>
+    </div>
+</body>
+
+</html>

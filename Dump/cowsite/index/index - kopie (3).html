@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Index</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #gravitytoggle{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+    <script>
+        function enableGravity() {
+        var shitzle = document.getElementsByClassName("gravityField")
+        for(var i in shitzle){
+            element = shitzle[i];
+            console.log(i, element.getBoundingClientRect())
+                        var rect = element.getBoundingClientRect()
+                var style = element.style
+            console.log(rect, element)
+                var topoff = document.getElementById("gravityBox").getBoundingClientRect()
+                topoff = document.getElementsByTagName("body")[0].getBoundingClientRect()
+
+            style.top = rect.top - topoff.top + "px"
+            console.log(style.top, rect.top, topoff.top, "px")
+                for (var key in rect){
+                    
+                    //if(key!="width"&&key!="height") style[key] = rect[key] - topoff[key] + "px"
+                }
+                
+                element.style.position = "absolute";
+                //applyGravity(element)
+            }
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div id="gravityBox">
+            <h1 class="gravityField">Wat zoek je?</h1>
+            <ol class="gravityField">
+                <li><a href="/introHTML">introHTML</a></li>
+                <li><a href="/Demo/MPTool">MPTool Minimal</a></li>
+                <li><a href="/Demo/Colourful.html">Colourful Tabs</a></li>
+                <li><a href="/Demo/Cake">3D Cake and Win10 reveal demo</a></li>
+            </ol>
+            <button id="gravitytoggle" onclick="enableGravity()" class="btr">Hey</button>
+        </div>
+    </main>
+</body></html>

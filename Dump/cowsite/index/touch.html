@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main onload="">
+        <div id="coordcontainer"></div>
+    </main>
+    <script>
+/*         function touchEvent(event){
+
+            switch(touchmove){
+                case "touchmove"
+            }
+            //console.log(event);
+        } */
+
+        function mouseDown(){
+
+        }
+        var coordcontitems = new Array();
+        function touch(event){
+            //console.log(event)
+            //console.log(event.touches)
+            //event.touches.forEach(touch=>console.log(touch))
+            var touches = event.touches;
+            for (let index = 0; index < touches.length; index++) {
+                //setCoord(touches[index])
+                var touch = touches[index]
+                if(!coordcontitems[index]) {
+                    coordcontitems[index] = new Array();
+                    var coordcontainer = document.getElementById("coordcontainer");
+                    for(var properT in touch) {
+                        
+                        var element = document.createElement("p");
+                        coordcontainer.appendChild(element);
+                        coordcontitems[index][properT] = element;
+                    }
+                }
+                for(var properT in touch) {
+                    coordcontitems[index][properT].innerHTML = touch[properT];
+                }
+            }
+        }
+
+        //const coordcont = document.getElementById("coordcontainer");
+        //var coordcontitems;
+
+        function setCoord(touch){
+            //console.log(coordcontitems)
+            if(!coordcontitems) {
+                coordcontitems = new Array();
+                var coordcontainer = document.getElementById("coordcontainer");
+                for(var properT in touch) {
+                    
+                    var element = document.createElement("p");
+                    coordcontainer.appendChild(element);
+                    coordcontitems[properT] = element;
+                }
+            }
+            for(var properT in touch) {
+                coordcontitems[properT].innerHTML = touch[properT];
+            }
+        }
+
+        // function setup(){
+        //     document.getElementById("coordcontainer")
+        // }
+
+        document.addEventListener("mousedown", mouseDown);
+        document.addEventListener("touchstart", touch);
+        document.addEventListener("touchmove", touch);
+        document.addEventListener("touchend", touch);
+    </script>
+    
+    
+</body>
+</html>

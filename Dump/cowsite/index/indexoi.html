@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Index</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            /*
+            animation-timing-function: ease-in-out;
+            transform-origin:50px 5px;
+transition:transform 1s ease-in-out 0s;
+animation-duration: 2.2s;
+animation-name: paragato;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+*/
+        }/*
+        #gravitytoggle{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: red;
+            padding: 10px 0;
+            position: relative;
+            -webkit-transition: all 1s linear;
+            -moz-transition: all 1s linear;
+            -o-transition: all 1s linear;
+            transition: all 1s linear;
+            left:0;
+        }
+
+        #gravitytoggle.transition {
+            background: green;
+            right: 50px;
+        }*/
+        .gravityField.ratur{
+            transition: none;
+        }
+        .gravityField{
+            transition: all 200ms cubic-bezier(1, 0.01, 1, 1);
+        }
+        .btr{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+    <script>
+        intervalId = false;
+        gravityElements = new Array();
+        
+
+        function toggleGravity(event) {
+            if(event.target.checked) enableGravity();
+            else disableGravity();
+        }
+
+        function toggleAnimation(enabled){
+            Array.from(document.getElementsByClassName("gravityField")).forEach(element=>{
+                if(enabled) element.classList.remove("ratur")
+                else element.classList.add("ratur")
+            });
+        }
+        
+        function enableGravity() {
+            var fields = Array.from(document.getElementsByClassName("gravityField"));
+            toggleAnimation(true)
+            gravityElements = fields.map(element=>prepareGravity(element));
+            fields.forEach(element=>element.style.position = "absolute");
+            toggleAnimation(false);
+            intervalId = window.setInterval(updateGravity, 10, gravityElements);
+        }
+
+        function disableGravity(){
+            console.log(gravityElements)
+            if(intervalId)window.clearInterval(intervalId)
+            gravityElements.forEach(element=>{
+                toggleAnimation(true);
+                console.log(element.element.style.top, element.original.top)
+                element.element.style.top = element.original.top;
+                setTimeout(() => {
+                    element.element.style = element.original.style;
+                }, 200);
+                
+
+                //field.style.position = "relative"
+            })
+        }
+
+        function prepareGravity(element) {
+            var rect = element.getBoundingClientRect()
+            //var gelement = new gravityElement(element, rect.top, rect.left);
+            
+            //var style = element.style
+            var topoff = document.getElementById("gravityBox").getBoundingClientRect()
+            gelement = new gravityElement(element, rect.top-topoff.top, rect.left-topoff.left)
+            //topoff.top = 80
+            gelement.element.style.top = gelement.x + "px"
+            //element.style.top = rect.top - topoff.top + "px"
+            
+            return new gravityElement(element, rect.top-topoff.top, rect.left-topoff.left)
+        }
+
+        function drawRectangel(x1, y1, x2, y2){
+            var element = document.createElement('rect');
+            console.log(x1, y1, x2, y2)
+            element.style.height = y2-y1 + "px";
+            element.style.width = x2-x1 +"px";
+            element.style.display = "block";
+            element.style.position = "absolute";
+            element.top = x1
+            element.left = y1
+            element.style.backgroundColor = "green";
+            document.getElementsByTagName("body")[0].appendChild(element)
+        }
+
+        class hitbox{
+            constructor(x1, y1, x2, y2){
+                drawRectangel(x1, y1, x2, y2);
+            }
+        }
+
+        class gravityElement{
+            constructor(element, x=0, y=0){
+                var rect = element.getBoundingClientRect()
+                this.original = new Object();
+                this.original.style = Object.create(element.style)
+                this.original.top = /*/rect.top/*/x + "px"
+                this.original.left = /*/rect.left/*/ + "px"
+                this.element = element
+                this.heigth = rect.height
+                this.width = rect.width
+                this.x = x
+                this.y = y
+                this.xv = 0
+                this.yv = 0
+                this.hitbox = new hitbox(this.x, this.y, rect.width+rect.x, rect.height+rect.y);
+                this.checkCollision=()=>{
+                    var floor = window.innerHeight-this.heigth-35;
+                    if(this.x>=floor){
+                        this.xv=0; //out of window check
+                        this.x=floor;
+                    }
+                }
+            }
+        }
+
+        //function applyGravity(element) {
+         //   
+          //  rect = element.getBoundingClientRect()
+         /*/   return //new gravityElement(element, rect.top, rect.left)
+        }*/
+
+        function updateGravity(gravityElements) {
+            var g = 9.81
+            var scalar = 10
+            var g = g/500
+            for(var i in gravityElements){
+                var element = gravityElements[i];
+                var updatetime = Date.now();
+                if(!element.lastupdate) element.lastupdate = updatetime;
+                var currentmultiplier = updatetime-element.lastupdate
+                element.xv += g * currentmultiplier;
+                element.checkCollision();
+                //console.log(element.x)
+                element.x += element.xv;
+                element.y += element.yv;
+                element.lastupdate = updatetime;
+                element.element.style.top = element.x + "px"
+            }
+            
+        }
+    </script>
+</head>
+<body onload="">
+    <main>
+        <div id="gravityBox">
+            <h1 class="gravityField">Wat zoek je?</h1>
+            <ol class="gravityField">
+                <li><a href="/introHTML">introHTML</a></li>
+                <li><a href="/Demo/MPTool">MPTool Minimal</a></li>
+                <li><a href="/Demo/Colourful.html">Colourful Tabs</a></li>
+                <li><a href="/Demo/Cake">3D Cake and Win10 reveal demo</a></li>
+            </ol>
+            <div class="btr">
+            <label for="gravitytoggle">Zwaartekracht</label><input id="gravitytoggle" type="checkbox" onchange="toggleGravity(event)">
+        </div>
+            <!--<button style="display:none;" id="gravitytoggleold" onclick="enableGravity()" class="btr">Hey</button>-->
+        </div>
+    </main>
+</body></html>
