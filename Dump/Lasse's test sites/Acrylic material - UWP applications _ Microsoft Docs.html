@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic -->
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus js-focus-visible theme-light" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="true" data-target="docs" x-ms-format-detection="none" nighteye="disabled" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Acrylic material - UWP applications">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic">
+			<meta property="og:description" content="A type of brush that creates a translucent texture.">
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png">
+		<meta property="og:image:alt" content="Microsoft Logo">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@docsmsft">
+
+
+	<meta name="author" content="hickeys">
+<meta name="breadcrumb_path" content="/windows/uwp/breadcrumbs/toc.json">
+<meta name="depot_name" content="MSDN.windows-uwp">
+<meta name="description" content="A type of brush that creates a translucent texture.">
+<meta name="design-contact" content="rybick">
+<meta name="dev-contact" content="jevansa">
+<meta name="doc-status" content="Published">
+<meta name="document_id" content="c9faf87c-bd56-99da-70ed-07c68f9118a5">
+<meta name="document_version_independent_id" content="713b5c24-d710-303f-620e-9c7735797907">
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/windows-uwp-pr/blob/3a7aee14475556f9e1489cac999aa785f7b991b8/windows-apps-src/design/style/acrylic.md">
+<meta name="htmlDangerZone" content="true">
+<meta name="keywords" content="windows 10, uwp">
+<meta name="locale" content="en-us">
+<meta name="ms.author" content="hickeys">
+<meta name="ms.date" content="08/09/2017">
+<meta name="ms.localizationpriority" content="medium">
+<meta name="ms.prod" content="uwp">
+<meta name="ms.technology" content="design">
+<meta name="ms.topic" content="article">
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/windows-uwp-pr/blob/live/windows-apps-src/design/style/acrylic.md">
+<meta name="pm-contact" content="yulikl">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="search.ms_docsetname" content="windows-uwp">
+<meta name="search.ms_product" content="MSDN">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="Search.Product" content="eADQiWindows 10XVcnh">
+<meta name="site_name" content="Docs">
+<meta name="template" content="detail.hbs">
+<meta name="uhfHeaderId" content="MSDocsHeader-WinDevCenter">
+<meta name="updated_at" content="2020-05-07 10:05 PM">
+<meta name="page_type" content="conceptual">
+<meta name="toc_rel" content="../../toc.json">
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/MSDN.windows-uwp/{branchName}{pdfName}">
+<meta name="word_count" content="1908">
+
+
+	<meta name="scope" content="UWP">
+<link href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic" rel="canonical">
+	<title>Acrylic material - UWP applications | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="./Acrylic material - UWP applications _ Microsoft Docs_files/62c7ff0c.site-ltr.css">
+
+	<link rel="stylesheet" href="./Acrylic material - UWP applications _ Microsoft Docs_files/5a8a71c1.conceptual.css">
+
+
+	<script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/saved_resource"></script><script async="" defer="" crossorigin="anonymous" src="./Acrylic material - UWP applications _ Microsoft Docs_files/lux.js.download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/analytics.js.download"></script><script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: true,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'MicrosoftDocs/windows-uwp',
+			feedbackProductUrl: 'https://github.com/microsoft/microsoft-ui-xaml/issues/new/choose',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/design/style/acrylic.md',
+			extendBreadcrumb: false,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/bluebird.min.js.download" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/fetch.umd.min.js.download" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/template.min.js.download" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/url.min.js.download" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="./Acrylic material - UWP applications _ Microsoft Docs_files/7501e2bd.index-polyfills.js.download"></script>
+		<script src="./Acrylic material - UWP applications _ Microsoft Docs_files/55f6956b.index-docs.js.download"></script><style></style><script src="./Acrylic material - UWP applications _ Microsoft Docs_files/jsll-4.js.download" async="" defer=""></script>
+<script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js.download"></script><style type="text/css" media="print">.usabilla_live_button_container { display: none; }</style><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(1).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(2).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(3).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(4).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(5).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(6).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(7).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(8).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(9).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(10).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(11).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(12).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(13).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(14).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(15).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(16).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(17).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(18).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(19).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(20).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(21).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(22).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(23).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(24).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(25).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(26).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(27).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(28).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(29).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(30).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(31).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(32).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(33).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(34).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(35).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(36).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(37).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(38).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(39).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(40).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(41).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(42).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(43).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(44).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(45).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(46).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(47).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(48).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(49).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(50).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(51).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(52).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(53).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(54).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(55).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(56).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(57).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(58).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(59).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(60).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(61).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(62).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(63).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(64).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(65).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(66).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(67).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(68).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(69).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(70).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(71).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(72).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(73).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(74).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(75).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(76).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(77).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(78).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(79).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(80).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(81).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(82).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(83).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(84).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(85).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(86).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(87).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(88).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(89).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(90).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(91).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(92).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(93).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(94).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(95).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(96).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(97).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(98).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(99).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(100).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(101).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(102).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(103).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(104).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(105).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(106).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(107).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(108).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(109).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(110).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(111).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(112).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(113).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(114).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(115).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(116).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(117).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(118).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(119).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(120).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(121).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(122).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(123).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(124).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(125).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(126).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(127).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(128).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(129).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(130).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(131).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(132).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(133).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(134).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(135).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(136).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(137).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(138).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(139).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(140).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(141).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(142).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(143).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(144).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(145).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(146).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(147).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(148).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(149).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(150).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(151).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(152).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(153).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(154).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(155).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(156).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(157).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(158).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(159).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(160).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(161).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(162).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(163).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(164).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(165).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(166).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(167).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(168).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(169).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(170).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(171).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(172).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(173).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(174).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(175).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(176).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(177).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(178).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(179).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(180).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(181).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(182).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(183).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(184).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(185).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(186).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(187).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(188).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(189).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(190).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(191).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(192).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(193).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(194).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(195).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(196).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(197).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(198).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(199).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(200).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(201).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(202).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(203).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(204).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(205).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(206).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(207).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(208).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(209).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(210).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(211).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(212).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(213).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(214).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(215).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(216).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(217).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(218).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(219).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(220).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(221).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(222).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(223).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(224).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(225).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(226).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(227).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(228).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(229).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(230).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(231).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(232).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(233).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(234).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(235).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(236).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(237).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(238).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(239).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(240).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(241).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(242).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(243).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(244).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(245).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(246).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(247).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(248).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(249).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(250).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(251).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(252).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(253).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(254).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(255).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(256).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(257).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(258).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(259).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(260).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(261).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(262).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(263).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(264).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(265).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(266).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(267).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(268).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(269).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(270).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(271).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(272).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(273).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(274).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(275).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(276).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(277).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(278).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(279).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(280).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(281).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(282).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(283).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(284).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(285).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(286).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(287).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(288).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(289).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(290).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(291).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(292).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(293).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(294).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(295).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(296).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(297).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(298).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(299).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(300).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(301).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(302).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(303).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(304).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(305).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(306).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(307).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(308).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(309).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(310).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(311).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(312).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(313).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(314).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(315).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(316).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(317).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(318).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(319).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(320).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(321).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(322).download"></script><script async="" src="./Acrylic material - UWP applications _ Microsoft Docs_files/t.js(323).download"></script><script async="" src="https://web.vortex.data.microsoft.com/collect/v1/t.js?ver=%272.1%27&amp;name=%27Ms.Webi.PageAction%27&amp;time=%272020-07-20T20%3A25%3A03.040Z%27&amp;os=%27Windows%27&amp;appId=%27JS%3ADocs%27&amp;-ver=%271.0%27&amp;-impressionGuid=%27e327b29d-00dc-4953-a5e2-9ca0739e43ef%27&amp;-pageName=%27c9faf87c-bd56-99da-70ed-07c68f9118a5%27&amp;-uri=%27https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fuwp%2Fdesign%2Fstyle%2Facrylic%27&amp;-pageTags=%27%7B%22author%22%3A%22hickeys%22%2C%22depotname%22%3A%22MSDN.windows-uwp%22%2C%22document_version_independent_id%22%3A%22713b5c24-d710-303f-620e-9c7735797907%22%2C%22gitcommit%22%3A%22https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fwindows-uwp-pr%2Fblob%2F3a7aee14475556f9e1489cac999aa785f7b991b8%2Fwindows-apps-src%2Fdesign%2Fstyle%2Facrylic.md%22%2C%22pgauth%22%3A%22hickeys%22%2C%22date%22%3A%2208%2F09%2F2017%22%2C%22product%22%3A%22uwp%22%2C%22technology%22%3A%22design%22%2C%22pgtop%22%3A%22article%22%2C%22giturl%22%3A%22https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fwindows-uwp-pr%2Fblob%2Flive%2Fwindows-apps-src%2Fdesign%2Fstyle%2Facrylic.md%22%2C%22publishtime%22%3A%222020-05-07%2010%3A05%20PM%22%2C%22contentlocale%22%3A%22en-us%22%2C%22highContrast%22%3A%22false%22%2C%22metaTags%22%3A%7B%7D%7D%27&amp;-contentVer=%272.0%27&amp;-market=%27en-us%27&amp;-pageType=%27conceptual%27&amp;-actionType=%27O%27&amp;-behavior=300&amp;-content=%27%5B%7B%22event%22%3A%22page-visibility-changed%22%2C%22value%22%3A%22hidden%22%7D%5D%27&amp;*baseType=%27Ms.Content.PageAction%27&amp;*timeToAction=22235018&amp;*cookieEnabled=true&amp;*isJs=true&amp;*title=%27Acrylic%20material%20-%20UWP%20applications%20%7C%20Microsoft%20Docs%27&amp;*isLoggedIn=false&amp;*isManual=true&amp;*referrerUri=%27https%3A%2F%2Fwww.google.com%2F%27&amp;ext-javascript-ver=%271.1%27&amp;ext-javascript-libVer=%274.2.14%27&amp;ext-javascript-domain=%27docs.microsoft.com%27&amp;ext-javascript-msfpc=%27GUID%3Dacaeeffd255d4c6b91448be0b5b8ff60%26HASH%3Dacae%26LV%3D202005%26V%3D4%26LU%3D1589587497799%27&amp;ext-javascript-userConsent=true&amp;ext-javascript-anid=%27A%3D87E9B5C6A40D6B68B9B6E8F8FFFFFFFF%27&amp;ext-user-localId=%27t%3A1B47D9CC4D3363AA3C78D7004C5F62E8%27&amp;$mscomCookies=false"></script></head>
+
+<body lang="en-us" dir="ltr"><div style="display: none;" id="lightningjs-usabilla_live"><div><iframe frameborder="0" id="lightningjs-frame-usabilla_live" src="./Acrylic material - UWP applications _ Microsoft Docs_files/saved_resource.html"></iframe></div></div>
+<div class="header-holder has-default-focus">
+	<a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization"><!----><!----><div class="nav-bar"><!---->  <div class="nav-bar-brand">
+		<a class="nav-bar-button" itemprop="url" href="https://www.microsoft.com/" aria-label="Microsoft">
+			<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+		</a>
+	</div> 
+			
+		<div class="nav-bar-item is-hidden-tablet">
+			<button class="nav-bar-button nav-bar-menu" title="Global navigation" aria-expanded="false">
+				<span class="nav-bar-menu-title"><!---->Documentation<!----></span>
+				<div class="nav-bar-burger">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span class="nav-bar-burger-label"><!---->Global navigation<!----></span>
+				</div>
+			</button>
+		</div>
+	
+			
+		<nav class="nav-bar-nav" role="navigation" aria-label="Global">
+			<ul class="nav-bar-nav-list">
+				
+		<li class="nav-bar-item is-category">
+			<a class="nav-bar-button is-title has-hover-underline" itemprop="url" href="https://docs.microsoft.com/en-us/">
+				<span><!---->Docs<!----></span>
+			</a>
+		</li>
+	
+				<!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline is-active" href="https://docs.microsoft.com/en-us/">
+					<span><!---->Documentation<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline " href="https://docs.microsoft.com/en-us/learn/">
+					<span><!---->Learn<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline " href="https://docs.microsoft.com/en-us/answers/products/">
+					<span><!---->Q&amp;A<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline " href="https://docs.microsoft.com/en-us/samples/browse/">
+					<span><!---->Code Samples<!----></span>
+				</a>
+		  </li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button has-hover-underline" aria-controls="ax-110">
+			<span><!---->More<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-110" aria-label="More">
+			<!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/en-us/"><!---->Documentation<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/en-us/learn/"><!---->Learn<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/en-us/answers/products/"><!---->Q&amp;A<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/en-us/samples/browse/"><!---->Code Samples<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+			<span class="nav-bar-spacer"></span>
+			
+		<div class="nav-bar-search " id="ax-111" hidden="">
+			
+		<form class="nav-bar-search-form" method="GET" name="searchForm" role="search" id="searchForm" aria-label="Search" aria-expanded="false" action="https://docs.microsoft.com/en-us/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!----> <div class="control ">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-search-input" class="autocomplete-input input   is-small" type="search" name="search" aria-expanded="false" aria-owns="ax-112-listbox" aria-activedescendant="" aria-label="Search" placeholder="Search">
+
+				<span aria-hidden="true" class="icon is-small is-left" hidden="">
+					<span class="has-text-primary docon docon-undefined"></span>
+				</span>
+
+				<span class="autocomplete-loader loader has-text-primary" aria-hidden="true" hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-112-listbox" aria-label="site-search-input-suggestions" hidden="">
+				
+			</ul><!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			<input name="scope" hidden="" value="UWP">
+			
+			
+		</form>
+	
+		</div>
+		
+					<div class="nav-bar-search">
+						<!-- hidden when the width drops to tablet -->
+						
+		<form class="nav-bar-search-form" method="GET" name="searchForm" role="search" id="searchFormDesktop" aria-label="Search" aria-expanded="false" action="https://docs.microsoft.com/en-us/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!----> <div class="control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="ax-113" class="autocomplete-input input control has-icons-left  is-small" type="search" name="search" aria-expanded="false" aria-owns="ax-114-listbox" aria-activedescendant="" aria-label="Search" placeholder="Search">
+
+				<span aria-hidden="true" class="icon is-small is-left">
+					<span class="has-text-primary docon docon-search"></span>
+				</span>
+
+				<span class="autocomplete-loader loader has-text-primary" aria-hidden="true" hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-114-listbox" aria-label="ax-113-suggestions" hidden="">
+				
+			</ul><!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			<input name="scope" hidden="" value="UWP">
+			
+			
+		</form>
+	
+					</div>
+			  
+		<div class="nav-bar-search " hidden="">
+			<div class="nav-bar-search-form-expander">
+				<button id="form-expander" class="nav-bar-button has-hover-underline " title="Search" aria-expanded="false" aria-controls="ax-111">
+					
+		<span class="is-visually-hidden-mobile"><!---->Search<!----></span>
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-search"></span>
+		</span>
+	
+				</button>
+			</div>
+		</div>
+	
+			
+		<div class="nav-bar-item is-size-small is-hidden-mobile has-padding-left-extra-small">
+			
+		<a class="docs-sign-in auth-status-determined not-authenticated button is-text has-inner-focus has-text-primary is-small" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#">
+			Sign in
+		</a>
+	 
+		<div class="dropdown has-caret auth-status-determined authenticated">
+			<button class="dropdown-trigger button-reset" aria-controls="user-menu" aria-expanded="false" aria-label="Your Account">
+				<figure class="image is-36x36">
+					<img class="has-body-background-medium is-rounded" alt="" data-profile-property="avatarUrl">
+				</figure>
+			</button>
+			<div class="dropdown-menu box" id="user-menu" role="menu">
+				<div class="media is-user-dir">
+					<div class="media-left">
+						<figure class="image is-48x48" aria-hidden="true">
+							<img class="has-body-background-medium is-rounded" aria-labelledby="displayName" data-profile-property="avatarUrl">
+						</figure>
+					</div>
+					<div class="media-content">
+						<p class="title is-size-large">
+							<span id="displayName" class="is-inline-truncated has-max-width-200" data-profile-property="displayName"></span>
+						</p>
+						<p class="subtitle is-size-small has-margin-bottom-none">
+							<span class="is-inline-truncated has-max-width-200" data-profile-property="upn"></span>
+						</p>
+					</div>
+				</div>
+				<ul>
+					<li><a href="https://docs.microsoft.com/profile" data-profile-property="profileUrl"><!---->Profile<!----></a></li>
+					<li><a href="https://docs.microsoft.com/profile" data-profile-property="bookmarksUrl"><!---->Bookmarks<!----></a></li>
+					<li><a href="https://docs.microsoft.com/profile" data-profile-property="collectionsUrl"><!---->Collections<!----></a></li>
+				</ul>
+				<div class="has-border-top">
+					<a class="docs-sign-out" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#"><!---->Sign out<!----></a>
+				</div>
+			</div>
+		</div>
+	
+		</div>
+	
+		 <!----></div><div class="nav-bar is-content"><!----> 
+		<a class="nav-bar-button is-title has-hover-underline" itemprop="url" href="https://developer.microsoft.com/windows">
+			<span><!---->Windows Dev Center<!----></span>
+		</a>
+	 
+		
+		<nav class="nav-bar-nav" role="navigation" aria-label="Site">
+			<ul class="nav-bar-nav-list">
+				
+				<!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button has-hover-underline" aria-controls="ax-105">
+			<span><!---->Explore<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-105" aria-label="Explore">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/get-started-windows-10"><!---->Get started developing for Windows<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/windows-10-for-developers"><!---->What’s new for Windows 10<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/enterprise"><!---->Build for enterprise<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/accessible-apps"><!---->Develop for accessibility<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/ad-monetization-platform"><!---->Ad Monetization platform<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button has-hover-underline" aria-controls="ax-106">
+			<span><!---->Platforms<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-106" aria-label="Platforms">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/windows/apps/desktop/"><!---->Windows PCs<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/iot"><!---->Windows IoT<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/mixed-reality"><!---->Mixed Reality<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/games"><!---->Games<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/web"><!---->Web<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/windows/uwp/"><!---->UWP<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline " href="https://docs.microsoft.com/windows/apps">
+					<span><!---->Docs<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline " href="https://developer.microsoft.com/windows/downloads">
+					<span><!---->Downloads<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline " href="https://developer.microsoft.com/windows/samples">
+					<span><!---->Samples<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline " href="https://developer.microsoft.com/windows/support">
+					<span><!---->Support<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="nav-bar-button has-hover-underline " href="https://partner.microsoft.com/dashboard">
+					<span><!---->Dashboard<!----></span>
+				</a>
+		  </li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button has-hover-underline" aria-controls="ax-107">
+			<span><!---->More<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-107" aria-label="More">
+			<!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button " aria-controls="ax-108">
+			<span><!---->Explore<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-108" aria-label="Explore">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/get-started-windows-10"><!---->Get started developing for Windows<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/windows-10-for-developers"><!---->What’s new for Windows 10<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/enterprise"><!---->Build for enterprise<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/accessible-apps"><!---->Develop for accessibility<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/ad-monetization-platform"><!---->Ad Monetization platform<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button " aria-controls="ax-109">
+			<span><!---->Platforms<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-109" aria-label="Platforms">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/windows/apps/desktop/"><!---->Windows PCs<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/iot"><!---->Windows IoT<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/mixed-reality"><!---->Mixed Reality<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/games"><!---->Games<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/web"><!---->Web<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/windows/uwp/"><!---->UWP<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://docs.microsoft.com/windows/apps"><!---->Docs<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/downloads"><!---->Downloads<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/samples"><!---->Samples<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://developer.microsoft.com/windows/support"><!---->Support<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="nav-bar-button" href="https://partner.microsoft.com/dashboard"><!---->Dashboard<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+		<span class="nav-bar-spacer"></span>
+		
+	 <!----></div></header>		</div>
+		<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+			<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+				<ul id="page-breadcrumbs" class="breadcrumbs"><!---->
+			<!----> <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+					 <a itemprop="item" href="https://docs.microsoft.com/en-us/windows/">
+								<span itemprop="name">
+									Windows
+								</span>
+						  </a>
+					<meta itemprop="position" content="1">
+				</li><!----> <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+					 <a itemprop="item" href="https://docs.microsoft.com/en-us/windows/apps/">
+								<span itemprop="name">
+									Apps
+								</span>
+						  </a>
+					<meta itemprop="position" content="2">
+				</li><!----> <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+					 <a itemprop="item" href="https://docs.microsoft.com/en-us/windows/uwp/">
+								<span itemprop="name">
+									UWP
+								</span>
+						  </a>
+					<meta itemprop="position" content="3">
+				</li><!----> <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+					 <a itemprop="item" href="https://docs.microsoft.com/en-us/windows/uwp/design/">
+								<span itemprop="name">
+									Design and UI
+								</span>
+						  </a>
+					<meta itemprop="position" content="4">
+				</li><!----> <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+					 <a itemprop="item" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/">
+								<span itemprop="name">
+									Style
+								</span>
+						  </a>
+					<meta itemprop="position" content="5">
+				</li><!---->
+		<!----></ul>
+			</nav>
+		<div class="content-header-controls">
+			<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+				<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+				<span class="contents-expand-title">Contents</span>
+			</button>
+			<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+				<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+				<span>Exit focus mode</span>
+			</button>
+		</div>
+		<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+			<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+				<li>
+					<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Add bookmark for Acrylic material - UWP applications | Microsoft Docs" aria-pressed="false">
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-single-bookmark"></span>
+						</span>
+						<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+					</button>
+				</li>
+					<li id="feedback-section-link">
+						<a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#feedback" class="button is-text has-inner-focus is-small is-icon-only-touch" data-bi-name="comments" title="Send feedback about this page">
+							<span class="icon">
+								<span class="docon docon-comment-lines" aria-hidden="true"></span>
+							</span>
+							<span class="is-visually-hidden-touch is-hidden-portrait">Feedback</span>
+						</a>
+					</li>
+						<li id="contenteditbtn">
+							<a href="https://github.com/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/design/style/acrylic.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://github.com/MicrosoftDocs/windows-uwp-pr/blob/live/windows-apps-src/design/style/acrylic.md" data-original_content_git_url_template="{repo}/blob/{branch}/windows-apps-src/design/style/acrylic.md" data-pr_repo="" data-pr_branch="">
+							<span class="icon">
+								<span class="docon docon-edit-outline" aria-hidden="true"></span>
+							</span>
+							<span class="is-visually-hidden-touch is-hidden-portrait">Edit</span>
+						</a>
+					</li>
+				<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">Share</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fuwp%2Fdesign%2Fstyle%2Facrylic%3FWT.mc_id%3Dtwitter&amp;text=Acrylic%20material%20-%20UWP%20applications%20%7C%20Microsoft%20Docs&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fuwp%2Fdesign%2Fstyle%2Facrylic%3FWT.mc_id%3Dtwitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fuwp%2Fdesign%2Fstyle%2Facrylic%3FWT.mc_id%3Dlinkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fuwp%2Fdesign%2Fstyle%2Facrylic%3FWT.mc_id%3Dfacebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email" href="mailto:?subject=%5BShared%20Article%5D%20Acrylic%20material%20-%20UWP%20applications%20%7C%20Microsoft%20Docs&amp;body=Acrylic%20material%20-%20UWP%20applications%20%7C%20Microsoft%20Docs%0A%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fuwp%2Fdesign%2Fstyle%2Facrylic%3FWT.mc_id%3Demail">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Email</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>				</li>
+			</ul>
+			<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+				<span class="icon">
+					<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+				</span>
+				<span class="contents-expand-title">Table of contents</span>
+			</button>
+			<div class="is-invisible"></div>
+			<div class="is-hidden-tablet level-item is-flexible level-right">
+				<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+					<span class="icon">
+						<span class="docon docon-more-vertical" aria-hidden="true"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="Primary" data-bi-name="left toc" style="width: 267.094px; top: 24px; bottom: 24px;"><form action="javascript:" role="search" aria-label="Search" class="has-margin-bottom-small"><label class="visually-hidden" for="ax-43">Search</label><div class="autocomplete is-block" data-bi-name="autocomplete"><!----> <div class="control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="ax-43" class="autocomplete-input input control has-icons-left is-full-width is-small" type="text" aria-expanded="false" aria-owns="ax-44-listbox" aria-activedescendant="" placeholder="Filter by title">
+
+				<span aria-hidden="true" class="icon is-small is-left">
+					<span class="has-text-primary docon docon-filter-settings"></span>
+				</span>
+
+				<span class="autocomplete-loader loader has-text-primary" aria-hidden="true" hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-44-listbox" aria-label="ax-43-suggestions" hidden="">
+				
+			</ul><!----></div></form><ul class="tree is-vertically-scrollable has-flex-grow has-flex-shrink" role="tree" aria-label="Table of contents" data-bi-name="tree" data-is-collapsible="true"><li class="tree-item" aria-setsize="7" aria-level="1" aria-posinset="1" role="treeitem" tabindex="-1" id="title-1-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>What's new</span></li><li class="tree-item" aria-setsize="7" aria-level="1" aria-posinset="2" role="treeitem" tabindex="-1" id="title-2-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Get started</span></li><li class="tree-item is-expanded" aria-setsize="7" aria-level="1" aria-posinset="3" role="treeitem" tabindex="-1" id="title-3-1" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Design and UI</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="11" aria-level="2" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/">Overview</a></li><li class="tree-item" aria-setsize="11" aria-level="2" aria-posinset="2" role="treeitem" tabindex="-1" id="title-2-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Design basics</span></li><li class="tree-item" aria-setsize="11" aria-level="2" aria-posinset="3" role="treeitem" tabindex="-1" id="title-3-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Layout</span></li><li class="tree-item" aria-setsize="11" aria-level="2" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Controls</span></li><li class="tree-item is-expanded" aria-setsize="11" aria-level="2" aria-posinset="5" role="treeitem" tabindex="-1" id="title-5-2" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Style</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/">Overview</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="2" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/color">Color</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="3" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/typography">Typography</a></li><li class="tree-item" aria-setsize="13" aria-level="3" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Icons</span></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="5" role="treeitem" tabindex="0" class="tree-item is-leaf is-selected" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic" aria-current="page">Acrylic</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="6" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/reveal">Reveal highlight</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="7" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/reveal-focus">Reveal focus</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="8" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/rounded-corner">Corner radius</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="9" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/sound">Sound</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="10" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/spacing">Spacing</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="11" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/writing-style">Writing style</a></li><li role="none"><a aria-setsize="13" aria-level="3" aria-posinset="12" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/brushes">XAML brushes</a></li><li class="tree-item" aria-setsize="13" aria-level="3" aria-posinset="13" role="treeitem" tabindex="-1" id="title-13-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>XAML styles</span></li></ul></li><li class="tree-item" aria-setsize="11" aria-level="2" aria-posinset="6" role="treeitem" tabindex="-1" id="title-6-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Motion</span></li><li class="tree-item" aria-setsize="11" aria-level="2" aria-posinset="7" role="treeitem" tabindex="-1" id="title-7-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Shell</span></li><li class="tree-item" aria-setsize="11" aria-level="2" aria-posinset="8" role="treeitem" tabindex="-1" id="title-8-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Input and interactions</span></li><li class="tree-item" aria-setsize="11" aria-level="2" aria-posinset="9" role="treeitem" tabindex="-1" id="title-9-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Devices</span></li><li class="tree-item" aria-setsize="11" aria-level="2" aria-posinset="10" role="treeitem" tabindex="-1" id="title-10-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Usability</span></li><li role="none"><a aria-setsize="11" aria-level="2" aria-posinset="11" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/windows/uwp/design/downloads/">Design toolkits</a></li></ul></li><li class="tree-item" aria-setsize="7" aria-level="1" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Develop apps</span></li><li class="tree-item" aria-setsize="7" aria-level="1" aria-posinset="5" role="treeitem" tabindex="-1" id="title-5-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Develop games</span></li><li class="tree-item" aria-setsize="7" aria-level="1" aria-posinset="6" role="treeitem" tabindex="-1" id="title-6-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Publish</span></li><li role="none"><a aria-setsize="7" aria-level="1" aria-posinset="7" role="treeitem" tabindex="-1" class="tree-item is-leaf" data-bi-name="tree-leaf" href="https://docs.microsoft.com/en-us/uwp/">API reference</a></li></ul><a class="button is-small is-text has-flex-justify-content-start has-inner-focus has-margin-top-small has-border-top has-border-bottom has-flex-shrink-none" href="https://docs.microsoft.com/en-us/windows/uwp/opbuildpdf/toc.pdf?branch=live" data-bi-name="downloadPdf" rel="nofollow"><!----> <span class="icon is-size-extra-small has-text-subtle">
+				<span aria-hidden="true" class="docon docon-dictionary-download"></span>
+			</span>
+			<span><!---->Download PDF<!----></span><!----></a></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="acrylic-material">Acrylic material</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li>
+								<time class="" data-article-date="" aria-label="Article review date" datetime="2017-08-09T00:00:00.000Z" data-article-date-source="ms.date">08/09/2017</time>
+							</li>
+								<li class="readingTime">9 minutes to read</li>
+								<li class="contributors-holder">
+									<a href="https://github.com/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/design/style/acrylic.md" title="16 Contributors" aria-label="16 Contributors">
+										<ul class="contributors" data-bi-name="contributors" aria-hidden="true">
+													<li><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/hickeys.png" data-src="https://github.com/hickeys.png?size=32" role="presentation"></li>
+													<li><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/Sylvain2703.png" data-src="https://github.com/Sylvain2703.png?size=32" role="presentation"></li>
+													<li><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/mcleanbyron.png" data-src="https://github.com/mcleanbyron.png?size=32" role="presentation"></li>
+													<li><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/JiayueHu.png" data-src="https://github.com/JiayueHu.png?size=32" role="presentation"></li>
+													<li><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/v-makoud.png" data-src="https://github.com/v-makoud.png?size=32" role="presentation"></li>
+											<li><span class="is-size-extra-small has-text-subtle">+11</span></li>
+										</ul>
+									</a>
+								</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+							<h3>In this article</h3>
+						<ol><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-and-the-fluent-design-system">Acrylic and the Fluent Design System</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#video-summary">Video summary</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#examples">Examples</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-blend-types">Acrylic blend types</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#when-to-use-acrylic">When to use acrylic</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#usability-and-adaptability">Usability and adaptability</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-theme-resources">Acrylic theme resources</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#custom-acrylic-brush">Custom acrylic brush</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#extend-acrylic-into-the-title-bar">Extend acrylic into the title bar</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#dos-and-donts">Do's and don'ts</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#how-we-designed-acrylic">How we designed acrylic</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#get-the-sample-code">Get the sample code</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#related-articles">Related articles</a></li></ol></nav>
+
+						<!-- <content> -->
+							<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/header-acrylic.svg" alt="hero image" data-linktype="relative-path"></p>
+<p>Acrylic is a type of <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush" data-linktype="absolute-path">Brush</a> that creates a translucent texture. You can apply acrylic to app surfaces to add depth and help establish a visual hierarchy.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. --></p>
+<blockquote>
+<p><strong>Important APIs</strong>: <a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush" data-linktype="absolute-path">AcrylicBrush class</a>, <a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background" data-linktype="absolute-path">Background property</a></p>
+</blockquote>
+<section class="row">
+<div class="column">
+<p>Acrylic in light theme
+<img src="./Acrylic material - UWP applications _ Microsoft Docs_files/acrylic_lighttheme_base.png" alt="Acrylic in light theme" data-linktype="relative-path"></p>
+</div>
+<div class="column">
+<p>Acrylic in dark theme
+<img src="./Acrylic material - UWP applications _ Microsoft Docs_files/acrylic_darktheme_base.png" alt="Acrylic in dark theme" data-linktype="relative-path"></p>
+</div>
+</section>
+<h2 id="acrylic-and-the-fluent-design-system" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-and-the-fluent-design-system" aria-labelledby="acrylic-and-the-fluent-design-system"></a>Acrylic and the Fluent Design System</h2>
+<p>The Fluent Design System helps you create modern, bold UI that incorporates light, depth, motion, material, and scale. Acrylic is a Fluent Design System component that adds physical texture (material) and depth to your app. To learn more, see the <a href="https://docs.microsoft.com/en-us/windows/apps/fluent-design-system" data-linktype="absolute-path">Fluent Design overview</a>.</p>
+<h2 id="video-summary" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#video-summary" aria-labelledby="video-summary"></a>Video summary</h2>
+<div class="embeddedvideo"><iframe src="./Acrylic material - UWP applications _ Microsoft Docs_files/player.html" frameborder="0" allowfullscreen="true" title="Video: WinDev002"></iframe></div>
+<h2 id="examples" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#examples" aria-labelledby="examples"></a>Examples</h2>
+<section class="row">
+<div class="column">
+<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/xaml-controls-gallery-app-icon.png" alt="Some image" data-linktype="relative-path"></p>
+</div>
+<div class="column span2">
+<p><strong>XAML Controls Gallery</strong><br>
+If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/Acrylic" data-linktype="external">here</a> to open the app and see acrylic in action.</p>
+<p><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT" data-linktype="external">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
+<a href="https://github.com/Microsoft/Xaml-Controls-Gallery" data-linktype="external">Get the source code (GitHub)</a></p>
+</div>
+</section>
+<h2 id="acrylic-blend-types" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-blend-types" aria-labelledby="acrylic-blend-types"></a>Acrylic blend types</h2>
+<p>Acrylic's most noticeable characteristic is its transparency. There are two acrylic blend types that change what’s visible through the material:</p>
+<ul>
+<li><strong>Background acrylic</strong> reveals the desktop wallpaper and other windows that are behind the currently active app, adding depth between application windows while celebrating the user’s personalization preferences.</li>
+<li><strong>In-app acrylic</strong> adds a sense of depth within the app frame, providing both focus and hierarchy.</li>
+</ul>
+<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/backgroundacrylic_darktheme.png" alt="Background acrylic" data-linktype="relative-path"></p>
+<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/appacrylic_darktheme.png" alt="In-app acrylic" data-linktype="relative-path"></p>
+<p>Layer multiple acrylic surfaces with caution: multiple layers of background acrylic can create distracting optical illusions.</p>
+<h2 id="when-to-use-acrylic" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#when-to-use-acrylic" aria-labelledby="when-to-use-acrylic"></a>When to use acrylic</h2>
+<ul>
+<li>Use in-app acrylic for supporting UI, such as on surfaces that may overlap content when scrolled or interacted with.</li>
+<li>Use background acrylic for transient UI elements, such as context menus, flyouts, and light-dismissable UI.<br>Using Acrylic in transient scenarios helps maintain a visual relationship with the content that triggered the transient UI.</li>
+</ul>
+<p>If you are using in-app acrylic on navigation surfaces, consider extending content beneath the acrylic pane to improve the flow on your app. Using NavigationView will do this for you automatically. However, to avoid creating a striping effect, try not to place multiple pieces of acrylic edge-to-edge - this can create an unwanted seam between the two blurred surfaces. Acrylic is a tool to bring visual harmony to your designs, but when used incorrectly, can result in visual noise.</p>
+<p>Consider the following usage patterns to decide how best to incorporate acrylic into your app:</p>
+<h3 id="vertical-panes" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#vertical-panes" aria-labelledby="vertical-panes"></a>Vertical Panes</h3>
+<p>For vertical panes or surfaces that help section off content of your app, we recommend you use an opaque background instead of acrylic. If your vertical panes open on top of content, like in NavigationView's <strong>Compact</strong> or <strong>Minimal</strong> modes, we suggest you use in-app acrylic to help maintain the page's context when the user has this pane open.</p>
+<h3 id="transient-surfaces" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#transient-surfaces" aria-labelledby="transient-surfaces"></a>Transient surfaces</h3>
+<p>For apps with menu flyouts, non-modal popups, or light-dismiss panes, it is recommended to use background acrylic.</p>
+<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/mail_transientcontextmenu.png" alt="Mail app pattern using an informational flyout" data-linktype="relative-path"></p>
+<p>Many of our controls will use acrylic by default. <a href="https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus" data-linktype="absolute-path">MenuFlyouts</a>, <a href="https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/auto-suggest-box" data-linktype="absolute-path">AutoSuggestBox</a>, <a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.combobox" data-linktype="absolute-path">ComboBox</a> and similar controls with light-dismiss popups will all use the transient acrylic when they are invoked.</p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+<p>Rendering acrylic surfaces is GPU-intensive, which can increase device power consumption and shorten battery life. Acrylic effects are automatically disabled when devices enter Battery Saver mode, and users can disable acrylic effects for all apps, if they choose.</p>
+</div>
+<h2 id="usability-and-adaptability" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#usability-and-adaptability" aria-labelledby="usability-and-adaptability"></a>Usability and adaptability</h2>
+<p>Acrylic automatically adapts its appearance for a wide variety of devices and contexts.</p>
+<p>In High Contrast mode, users continue to see the familiar background color of their choosing in place of acrylic. In addition, both background acrylic and in-app acrylic appear as a solid color:</p>
+<ul>
+<li>When the user turns off transparency in Settings &gt; Personalization &gt; Color</li>
+<li>When Battery Saver mode is activated</li>
+<li>When the app runs on low-end hardware</li>
+</ul>
+<p>In addition, only background acrylic will replace its translucency and texture with a solid color:</p>
+<ul>
+<li>When an app window on desktop deactivates</li>
+<li>When the Windows app is running on phone, Xbox, HoloLens or tablet mode</li>
+</ul>
+<h3 id="legibility-considerations" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#legibility-considerations" aria-labelledby="legibility-considerations"></a>Legibility considerations</h3>
+<p>It’s important to ensure that any text your app presents to users <a href="https://docs.microsoft.com/en-us/windows/uwp/design/accessibility/accessible-text-requirements" data-linktype="relative-path">meets contrast ratios</a>. We’ve optimized the acrylic recipe so that high-color black, white or even medium-color gray text meets contrast ratios on top of acrylic. The theme resources provided by the platform default to contrasting tint colors at 80% opacity. When placing high-color body text on acrylic, you can reduce tint opacity while maintaining legibility. In dark mode, tint opacity can be 70%, while light mode acrylic will meet contrast ratios at 50% opacity.</p>
+<p>We don't recommend placing accent-colored text on your acrylic surfaces because these combinations are likely to not pass minimum contrast ratio requirements at 15px font size. Try to avoid placing <a href="https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/hyperlinks" data-linktype="relative-path">hyperlinks</a> over acrylic elements. Also, if you choose to customize the acrylic tint color or opacity level outside of the platform defaults provided by the theme resource, keep the impact on legibility in mind.</p>
+<h2 id="acrylic-theme-resources" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-theme-resources" aria-labelledby="acrylic-theme-resources"></a>Acrylic theme resources</h2>
+<p>You can easily apply acrylic to your app’s surfaces using the new XAML AcrylicBrush or predefined AcrylicBrush theme resources. First, you’ll need to decide whether to use in-app or background acrylic. Be sure to review common app patterns described earlier in this article for recommendations.</p>
+<p>We’ve created a collection of brush theme resources for both background and in-app acrylic types that respect the app’s theme and fall back to solid colors as needed. Resources named <em>AcrylicWindow</em> represent background acrylic, while <em>AcrylicElement</em> refers to in-app acrylic.</p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">Acrylic theme resources</caption>
+    <tbody><tr>
+        <th align="center">Resource key</th>
+        <th align="center">Tint opacity</th>
+        <th align="center"><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/color" data-linktype="relative-path">Fallback color</a> </th>
+    </tr>
+    <tr>
+        <td> SystemControlAcrylicWindowBrush, SystemControlAcrylicElementBrush <br> SystemControlChromeLowAcrylicWindowBrush, SystemControlChromeLowAcrylicElementBrush <br> SystemControlBaseHighAcrylicWindowBrush, SystemControlBaseHighAcrylicElementBrush <br> SystemControlBaseLowAcrylicWindowBrush, SystemControlBaseLowAcrylicElementBrush <br> SystemControlAltHighAcrylicWindowBrush, SystemControlAltHighAcrylicElementBrush <br> SystemControlAltLowAcrylicWindowBrush, SystemControlAltLowAcrylicElementBrush </td>
+        <td align="center"> 80% </td>
+        <td> ChromeMedium <br> ChromeLow <br><br> BaseHigh <br><br> BaseLow <br><br> AltHigh <br><br> AltLow </td>
+    </tr>
+    
+        <tr><td> <b>Recommended usage:</b> These are general-purpose acrylic resources that work well in a wide variety of usages. If your app uses secondary text of AltMedium color with text size smaller than 18px, place an 80% acrylic resource behind the text to <a href="https://docs.microsoft.com/en-us/windows/uwp/design/accessibility/accessible-text-requirements" data-linktype="relative-path">meet contrast ratio requirements</a>. </td>
+    </tr>
+    <tr>
+        <td> SystemControlAcrylicWindowMediumHighBrush, SystemControlAcrylicElementMediumHighBrush <br> SystemControlBaseHighAcrylicWindowMediumHighBrush, SystemControlBaseHighAcrylicElementMediumHighBrush </td>
+        <td align="center"> 70% </td>
+        <td> ChromeMedium <br><br> BaseHigh </td>
+    </tr>
+    <tr>
+        <td> <b>Recommended usage:</b> If your app uses secondary text of AltMedium color with a text size of 18px or larger, you can place these more translucent 70% acrylic resources behind the text. We recommend using these resources in your app's top horizontal navigation and commanding areas.  </td>
+    </tr>
+    <tr>
+        <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
+        <td align="center"> 60% </td>
+        <td> ChromeHigh <br><br> ChromeMedium <br><br> ChromeMediumLow <br><br> BaseHigh <br><br> BaseLow <br><br> AltMediumLow </td>
+    </tr>
+    <tr>
+        <td> <b>Recommended usage:</b> When placing only primary text of AltHigh color over acrylic, your app can utilize these 60% resources. We recommend painting your app's <a href="https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/navigationview" data-linktype="relative-path">vertical navigation pane</a>, i.e. hamburger menu, with 60% acrylic. </td>
+    </tr>
+</tbody></table></div>
+<p>In addition to color-neutral acrylic, we've also added resources that tint acrylic using the user-specified accent color. We recommend using colored acrylic sparingly. For the dark1 and dark2 variants provided, place white or light-colored text consistent with dark theme text color over these resources.</p>
+<div class="table-scroll-wrapper table-scroll-wrapper-scrollable"><table class="table"><caption class="visually-hidden">Acrylic theme resources</caption>
+    <tbody><tr>
+        <th align="center">Resource key</th>
+        <th align="center">Tint opacity</th>
+        <th align="center"><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/color" data-linktype="relative-path">Tint and Fallback colors</a> </th>
+    </tr>
+    <tr>
+        <td> SystemControlAccentAcrylicWindowAccentMediumHighBrush, SystemControlAccentAcrylicElementAccentMediumHighBrush  </td>
+        <td align="center"> 70% </td>
+        <td> SystemAccentColor </td>
+    </tr>
+    <tr>
+        <td> SystemControlAccentDark1AcrylicWindowAccentDark1Brush, SystemControlAccentDark1AcrylicElementAccentDark1Brush  </td>
+        <td align="center"> 80% </td>
+        <td> SystemAccentColorDark1 </td>
+    </tr>
+    <tr>
+        <td> SystemControlAccentDark2AcrylicWindowAccentDark2MediumHighBrush, SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush  </td>
+        <td align="center"> 70% </td>
+        <td> SystemAccentColorDark2 </td>
+    </tr>
+</tbody></table></div>
+<p>To paint a specific surface, apply one of the above theme resources to element backgrounds just as you would apply any other brush resource.</p>
+<div class="codeHeader" id="code-try-0" data-bi-name="code-header"><span class="language">XAML</span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="Copy code">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>Copy</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code class="lang-xaml" data-author-content="&lt;Grid Background=&quot;{ThemeResource SystemControlAcrylicElementBrush}&quot;&gt;
+"><span><span class="hljs-tag">&lt;<span class="hljs-name">Grid</span> <span class="hljs-attr">Background</span>=<span class="hljs-string">"{ThemeResource SystemControlAcrylicElementBrush}"</span>&gt;</span>
+</span></code></pre>
+<h2 id="custom-acrylic-brush" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#custom-acrylic-brush" aria-labelledby="custom-acrylic-brush"></a>Custom acrylic brush</h2>
+<p>You may choose to add a color tint to your app’s acrylic to show branding or provide visual balance with other elements on the page. To show color rather than greyscale, you’ll need to define your own acrylic brushes using the following properties.</p>
+<ul>
+<li><strong>TintColor</strong>: the color/tint overlay layer. Consider specifying both the RGB color value and alpha channel opacity.</li>
+<li><strong>TintOpacity</strong>: the opacity of the tint layer. We recommend 80% opacity as a starting point, although different colors may look more compelling at other translucencies.</li>
+<li><strong>TintLuminosityOpacity</strong>: controls the amount of saturation that is allowed through the acrylic surface from the background.</li>
+<li><strong>BackgroundSource</strong>: the flag to specify whether you want background or in-app acrylic.</li>
+<li><strong>FallbackColor</strong>: the solid color that replaces acrylic in Battery Saver. For background acrylic, fallback color also replaces acrylic when your app isn’t in the active desktop window or when the app is running on phone and Xbox.</li>
+</ul>
+<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/customacrylic_swatches_lighttheme.png" alt="Light theme acrylic swatches" data-linktype="relative-path"></p>
+<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/customacrylic_swatches_darktheme.png" alt="Dark theme acrylic swatches" data-linktype="relative-path"></p>
+<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/luminosityversustint.png" alt="Luminosity opactity compared to tint opacity" data-linktype="relative-path"></p>
+<p>To add an acrylic brush, define the three resources for dark, light and high contrast themes. Note that in high contrast, we recommend using a SolidColorBrush with the same x:Key as the dark/light AcrylicBrush.</p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+<p>If you don't specify a TintLuminosityOpacity value, the system will automatically adjust its value based on your TintColor and TintOpacity.</p>
+</div>
+<div class="codeHeader" id="code-try-1" data-bi-name="code-header"><span class="language">XAML</span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="Copy code">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>Copy</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code class="lang-xaml" data-author-content="&lt;ResourceDictionary.ThemeDictionaries&gt;
+    &lt;ResourceDictionary x:Key=&quot;Default&quot;&gt;
+        &lt;AcrylicBrush x:Key=&quot;MyAcrylicBrush&quot;
+            BackgroundSource=&quot;HostBackdrop&quot;
+            TintColor=&quot;#FFFF0000&quot;
+            TintOpacity=&quot;0.8&quot;
+            TintLuminosityOpacity=&quot;0.5&quot;
+            FallbackColor=&quot;#FF7F0000&quot;/&gt;
+    &lt;/ResourceDictionary&gt;
+
+    &lt;ResourceDictionary x:Key=&quot;HighContrast&quot;&gt;
+        &lt;SolidColorBrush x:Key=&quot;MyAcrylicBrush&quot;
+            Color=&quot;{ThemeResource SystemColorWindowColor}&quot;/&gt;
+    &lt;/ResourceDictionary&gt;
+
+    &lt;ResourceDictionary x:Key=&quot;Light&quot;&gt;
+        &lt;AcrylicBrush x:Key=&quot;MyAcrylicBrush&quot;
+            BackgroundSource=&quot;HostBackdrop&quot;
+            TintColor=&quot;#FFFF0000&quot;
+            TintOpacity=&quot;0.8&quot;
+            TintLuminosityOpacity=&quot;0.5&quot;
+            FallbackColor=&quot;#FFFF7F7F&quot;/&gt;
+    &lt;/ResourceDictionary&gt;
+&lt;/ResourceDictionary.ThemeDictionaries&gt;
+"><span><span class="hljs-tag">&lt;<span class="hljs-name">ResourceDictionary.ThemeDictionaries</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ResourceDictionary</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"Default"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">AcrylicBrush</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"MyAcrylicBrush"</span>
+            <span class="hljs-attr">BackgroundSource</span>=<span class="hljs-string">"HostBackdrop"</span>
+            <span class="hljs-attr">TintColor</span>=<span class="hljs-string">"#FFFF0000"</span>
+            <span class="hljs-attr">TintOpacity</span>=<span class="hljs-string">"0.8"</span>
+            <span class="hljs-attr">TintLuminosityOpacity</span>=<span class="hljs-string">"0.5"</span>
+            <span class="hljs-attr">FallbackColor</span>=<span class="hljs-string">"#FF7F0000"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ResourceDictionary</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ResourceDictionary</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"HighContrast"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">SolidColorBrush</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"MyAcrylicBrush"</span>
+            <span class="hljs-attr">Color</span>=<span class="hljs-string">"{ThemeResource SystemColorWindowColor}"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ResourceDictionary</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ResourceDictionary</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"Light"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">AcrylicBrush</span> <span class="hljs-attr">x:Key</span>=<span class="hljs-string">"MyAcrylicBrush"</span>
+            <span class="hljs-attr">BackgroundSource</span>=<span class="hljs-string">"HostBackdrop"</span>
+            <span class="hljs-attr">TintColor</span>=<span class="hljs-string">"#FFFF0000"</span>
+            <span class="hljs-attr">TintOpacity</span>=<span class="hljs-string">"0.8"</span>
+            <span class="hljs-attr">TintLuminosityOpacity</span>=<span class="hljs-string">"0.5"</span>
+            <span class="hljs-attr">FallbackColor</span>=<span class="hljs-string">"#FFFF7F7F"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ResourceDictionary</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ResourceDictionary.ThemeDictionaries</span>&gt;</span>
+</span></code></pre>
+<p>The following sample shows how to declare AcrylicBrush in code. If your app supports multiple OS targets, be sure to check that this API is available on the user’s machine.</p>
+<div class="codeHeader" id="code-try-2" data-bi-name="code-header"><span class="language">C#</span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="Copy code">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>Copy</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code class="lang-csharp" data-author-content="if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent(&quot;Windows.UI.Xaml.Media.AcrylicBrush&quot;))
+{
+    Windows.UI.Xaml.Media.AcrylicBrush myBrush = new Windows.UI.Xaml.Media.AcrylicBrush();
+    myBrush.BackgroundSource = Windows.UI.Xaml.Media.AcrylicBackgroundSource.HostBackdrop;
+    myBrush.TintColor = Color.FromArgb(255, 202, 24, 37);
+    myBrush.FallbackColor = Color.FromArgb(255, 202, 24, 37);
+    myBrush.TintOpacity = 0.6;
+
+    grid.Fill = myBrush;
+}
+else
+{
+    SolidColorBrush myBrush = new SolidColorBrush(Color.FromArgb(255, 202, 24, 37));
+
+    grid.Fill = myBrush;
+}
+"><span><span class="hljs-keyword">if</span> (Windows.Foundation.Metadata.ApiInformation.IsTypePresent(<span class="hljs-string">"Windows.UI.Xaml.Media.AcrylicBrush"</span>))
+{
+    Windows.UI.Xaml.Media.AcrylicBrush myBrush = <span class="hljs-keyword">new</span> Windows.UI.Xaml.Media.AcrylicBrush();
+    myBrush.BackgroundSource = Windows.UI.Xaml.Media.AcrylicBackgroundSource.HostBackdrop;
+    myBrush.TintColor = Color.FromArgb(<span class="hljs-number">255</span>, <span class="hljs-number">202</span>, <span class="hljs-number">24</span>, <span class="hljs-number">37</span>);
+    myBrush.FallbackColor = Color.FromArgb(<span class="hljs-number">255</span>, <span class="hljs-number">202</span>, <span class="hljs-number">24</span>, <span class="hljs-number">37</span>);
+    myBrush.TintOpacity = <span class="hljs-number">0.6</span>;
+
+    grid.Fill = myBrush;
+}
+<span class="hljs-keyword">else</span>
+{
+    SolidColorBrush myBrush = <span class="hljs-keyword">new</span> SolidColorBrush(Color.FromArgb(<span class="hljs-number">255</span>, <span class="hljs-number">202</span>, <span class="hljs-number">24</span>, <span class="hljs-number">37</span>));
+
+    grid.Fill = myBrush;
+}
+</span></code></pre>
+<h2 id="extend-acrylic-into-the-title-bar" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#extend-acrylic-into-the-title-bar" aria-labelledby="extend-acrylic-into-the-title-bar"></a>Extend acrylic into the title bar</h2>
+<p>To give your app's window a seamless look, you can use acrylic in the title bar area. This example extends acrylic into the title bar by setting the <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar" data-linktype="absolute-path">ApplicationViewTitleBar</a> object's <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor" data-linktype="absolute-path">ButtonBackgroundColor</a> and <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor" data-linktype="absolute-path">ButtonInactiveBackgroundColor</a> properties to <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Colors.Transparent" data-linktype="absolute-path">Colors.Transparent</a>.</p>
+<div class="codeHeader" id="code-try-3" data-bi-name="code-header"><span class="language">C#</span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="Copy code">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>Copy</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code class="lang-csharp" data-author-content="private void ExtendAcrylicIntoTitleBar()
+{
+    CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+    ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
+    titleBar.ButtonBackgroundColor = Colors.Transparent;
+    titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+}
+"><span><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ExtendAcrylicIntoTitleBar</span>(<span class="hljs-params"></span>)</span>
+{
+    CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = <span class="hljs-literal">true</span>;
+    ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
+    titleBar.ButtonBackgroundColor = Colors.Transparent;
+    titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+}
+</span></code></pre>
+<p>This code can be placed in your app's <a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_" data-linktype="absolute-path">OnLaunched</a> method (<em>App.xaml.cs</em>), after the call to <a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.window.Activate" data-linktype="absolute-path">Window.Activate</a>, as shown here, or in your app's first page.</p>
+<div class="codeHeader" id="code-try-4" data-bi-name="code-header"><span class="language">C#</span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="Copy code">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>Copy</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code class="lang-csharp" data-author-content="// Call your extend acrylic code in the OnLaunched event, after
+// calling Window.Current.Activate.
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    Frame rootFrame = Window.Current.Content as Frame;
+
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == null)
+    {
+        // Create a Frame to act as the navigation context and navigate to the first page
+        rootFrame = new Frame();
+
+        rootFrame.NavigationFailed += OnNavigationFailed;
+
+        if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+        {
+            //TODO: Load state from previously suspended application
+        }
+
+        // Place the frame in the current Window
+        Window.Current.Content = rootFrame;
+    }
+
+    if (e.PrelaunchActivated == false)
+    {
+        if (rootFrame.Content == null)
+        {
+            // When the navigation stack isn&#39;t restored navigate to the first page,
+            // configuring the new page by passing required information as a navigation
+            // parameter
+            rootFrame.Navigate(typeof(MainPage), e.Arguments);
+        }
+        // Ensure the current window is active
+        Window.Current.Activate();
+
+        // Extend acrylic
+        ExtendAcrylicIntoTitleBar();
+    }
+}
+"><span><span class="hljs-comment">// Call your extend acrylic code in the OnLaunched event, after</span>
+<span class="hljs-comment">// calling Window.Current.Activate.</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnLaunched</span>(<span class="hljs-params">LaunchActivatedEventArgs e</span>)</span>
+{
+    Frame rootFrame = Window.Current.Content <span class="hljs-keyword">as</span> Frame;
+
+    <span class="hljs-comment">// Do not repeat app initialization when the Window already has content,</span>
+    <span class="hljs-comment">// just ensure that the window is active</span>
+    <span class="hljs-keyword">if</span> (rootFrame == <span class="hljs-literal">null</span>)
+    {
+        <span class="hljs-comment">// Create a Frame to act as the navigation context and navigate to the first page</span>
+        rootFrame = <span class="hljs-keyword">new</span> Frame();
+
+        rootFrame.NavigationFailed += OnNavigationFailed;
+
+        <span class="hljs-keyword">if</span> (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+        {
+            <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> Load state from previously suspended application</span>
+        }
+
+        <span class="hljs-comment">// Place the frame in the current Window</span>
+        Window.Current.Content = rootFrame;
+    }
+
+    <span class="hljs-keyword">if</span> (e.PrelaunchActivated == <span class="hljs-literal">false</span>)
+    {
+        <span class="hljs-keyword">if</span> (rootFrame.Content == <span class="hljs-literal">null</span>)
+        {
+            <span class="hljs-comment">// When the navigation stack isn't restored navigate to the first page,</span>
+            <span class="hljs-comment">// configuring the new page by passing required information as a navigation</span>
+            <span class="hljs-comment">// parameter</span>
+            rootFrame.Navigate(<span class="hljs-keyword">typeof</span>(MainPage), e.Arguments);
+        }
+        <span class="hljs-comment">// Ensure the current window is active</span>
+        Window.Current.Activate();
+
+        <span class="hljs-comment">// Extend acrylic</span>
+        ExtendAcrylicIntoTitleBar();
+    }
+}
+</span></code></pre>
+<p>In addition, you'll need to draw your app's title, which normally appears automatically in the title bar, with a TextBlock using <code>CaptionTextBlockStyle</code>. For more info, see <a href="https://docs.microsoft.com/en-us/windows/uwp/design/shell/title-bar" data-linktype="relative-path">Title bar customization</a>.</p>
+<h2 id="dos-and-donts" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#dos-and-donts" aria-labelledby="dos-and-donts"></a>Do's and don'ts</h2>
+<ul>
+<li>Do use acrylic as the background material of non-primary app surfaces like navigation panes.</li>
+<li>Do extend acrylic to at least one edge of your app to provide a seamless experience by subtly blending with the app’s surroundings.</li>
+<li>Don't put desktop acrylic on large background surfaces of your app - this breaks the mental model of acrylic being used primarily for transient surfaces.</li>
+<li>Don’t place in-app and background acrylics directly adjacent to avoid visual tension at the seams.</li>
+<li>Don't place multiple acrylic panes with the same tint and opacity next to each other because this results in an undesirable visible seam.</li>
+<li>Don’t place accent-colored text over acrylic surfaces.</li>
+</ul>
+<h2 id="how-we-designed-acrylic" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#how-we-designed-acrylic" aria-labelledby="how-we-designed-acrylic"></a>How we designed acrylic</h2>
+<p>We fine-tuned acrylic’s key components to arrive at its unique appearance and properties. We started with translucency, blur and noise to add visual depth and dimension to flat surfaces. We added an exclusion blend mode layer to ensure contrast and legibility of UI placed on an acrylic background. Finally, we added color tint for personalization opportunities. In concert these layers add up to a fresh, usable material.</p>
+<p><img src="./Acrylic material - UWP applications _ Microsoft Docs_files/acrylicrecipe_diagram.jpg" alt="Acrylic recipe" data-linktype="relative-path">
+<br>The acrylic recipe: background, blur, exclusion blend, color/tint overlay, noise</p>
+<h2 id="get-the-sample-code" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#get-the-sample-code" aria-labelledby="get-the-sample-code"></a>Get the sample code</h2>
+<ul>
+<li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery" data-linktype="external">XAML Controls Gallery sample</a> - See all the XAML controls in an interactive format.</li>
+</ul>
+<h2 id="related-articles" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#related-articles" aria-labelledby="related-articles"></a>Related articles</h2>
+<p><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/reveal" data-linktype="relative-path"><strong>Reveal highlight</strong></a></p>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- recommended content page section -->
+
+							<nav data-bi-name="recommendation-bottom" hidden="" id="recommended-content-center" class="is-hidden-desktop" aria-labelledby="recommended-content-center-title">
+								<h3 id="recommended-content-center-title" class="is-size-h2 has-margin-top-large has-margin-bottom-small">Related Articles</h3>
+							</nav>
+
+						<!-- end recommended content page section -->
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop has-border-top has-margin-top-large has-padding-top-small">
+									
+									
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-mobile" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required="" class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating link-button is-small" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled="" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								</div>
+						<!-- end page rating section -->
+
+
+						<!-- feedback section -->
+<section class="feedback-section is-relative" data-bi-name="feedback-section">
+
+    <h2 id="feedback" class="is-size-h2 has-margin-top-large">Feedback</h2>
+
+    <div class="alert choose-feedback-type has-margin-top-small has-margin-bottom-none">
+        <p aria-hidden="true" id="send-feedback-about" class="has-margin-top-none has-margin-bottom-none">Submit and view feedback for</p>
+
+        <div class="choose-feedback-buttons has-margin-top-large has-margin-bottom-none">
+                <a class="button feedback-type-product has-margin-bottom-small" aria-label="Send feedback about this product" href="https://github.com/microsoft/microsoft-ui-xaml/issues/new/choose" data-bi-name="product-feedback">
+                    <span>This product</span>
+                    <span aria-hidden="true" class="icon docon docon-navigate-external is-size-h2 has-margin-left-none"></span>
+                </a>
+
+			<a class="button feedback-type-product has-margin-bottom-small github-link" aria-label="Send feedback about this page" data-bi-name="create-issue-on-github" href="https://github.com/MicrosoftDocs/windows-uwp/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20c9faf87c-bd56-99da-70ed-07c68f9118a5%0A*%20Version%20Independent%20ID%3A%20713b5c24-d710-303f-620e-9c7735797907%0A*%20Content%3A%20%5BAcrylic%20material%20-%20UWP%20applications%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fuwp%2Fdesign%2Fstyle%2Facrylic)%0A*%20Content%20Source%3A%20%5Bwindows-apps-src%2Fdesign%2Fstyle%2Facrylic.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fwindows-uwp%2Fblob%2Fdocs%2Fwindows-apps-src%2Fdesign%2Fstyle%2Facrylic.md)%0A*%20Product%3A%20**uwp**%0A*%20Technology%3A%20**design**%0A*%20GitHub%20Login%3A%20%40hickeys%0A*%20Microsoft%20Alias%3A%20**hickeys**">
+				<span aria-hidden="true" class="docon docon-brand-github has-padding-right-extra-small"></span>
+				<span>This page</span>
+			</a>
+        </div>
+    </div>
+
+    <div class="action-container is-flex has-flex-justify-content-end has-margin-top-small has-margin-bottom-small">
+        <a class="view-on-github" data-bi-name="view-on-github" href="https://github.com/MicrosoftDocs/windows-uwp/issues?utf8=%E2%9C%93&amp;q=%22713b5c24-d710-303f-620e-9c7735797907%22&amp;in=body">
+            <span aria-hidden="true" class="docon docon-brand-github"></span>
+            <span>View all page feedback</span>
+            <span aria-hidden="true" class="icon docon docon-navigate-external is-size-h5"></span>
+        </a>
+    </div>
+</section>
+
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="https://docs.microsoft.com/en-us/locale?target=https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text">English (United States)</span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start is-selected" data-theme-to="light" aria-pressed="true">
+					<span class="theme-light has-margin-right-small">
+						<span class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="dark" aria-pressed="false">
+					<span class="theme-dark has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>© Microsoft 2020</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable" style="width: 141.047px; top: 24px; bottom: 24px;">
+								
+								
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-desktop" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="Any additional feedback?" required="" class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating link-button is-small" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled="" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								<nav data-bi-name="recommendation-sidebar" hidden="" id="recommended-content-nav" role="navigation" aria-labelledby="recommended-content-nav-title">
+									<h3 id="recommended-content-nav-title">Related Articles</h3>
+								</nav>
+							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+								<h3>In this article</h3>
+							<ol><li class=""><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-and-the-fluent-design-system">Acrylic and the Fluent Design System</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#video-summary">Video summary</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#examples">Examples</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-blend-types">Acrylic blend types</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#when-to-use-acrylic">When to use acrylic</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#usability-and-adaptability">Usability and adaptability</a></li><li class=""><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#acrylic-theme-resources">Acrylic theme resources</a></li><li class="selected"><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#custom-acrylic-brush">Custom acrylic brush</a></li><li class=""><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#extend-acrylic-into-the-title-bar">Extend acrylic into the title bar</a></li><li class=""><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#dos-and-donts">Do's and don'ts</a></li><li class=""><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#how-we-designed-acrylic">How we designed acrylic</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#get-the-sample-code">Get the sample code</a></li><li><a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic#related-articles">Related articles</a></li></ol></nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="https://docs.microsoft.com/en-us/locale?target=https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text">English (United States)</span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start is-selected" data-theme-to="light" aria-pressed="true">
+					<span class="theme-light has-margin-right-small">
+						<span class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="dark" aria-pressed="false">
+					<span class="theme-dark has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>© Microsoft 2020</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+	<span id="adobe-target-experiment-container" hidden=""></span>
+
+
+<div class="usabilla_live_button_container" role="button" tabindex="0" style="top: 50%; margin-top: 0px; position: fixed; width: 0px; height: 0px; z-index: 99999990; right: 0px; display: none;" aria-label="Usabilla Feedback Button"><iframe src="./Acrylic material - UWP applications _ Microsoft Docs_files/saved_resource(1).html" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" data-tags="right" title="Usabilla Feedback Button" style="width: 0px; height: 0px; margin: 0px; padding: 0px; border: 0px; overflow: hidden; z-index: 9998; position: absolute; left: 0px; top: 0px; box-shadow: 0px 0px 0px; background-color: transparent;"></iframe></div></body></html>

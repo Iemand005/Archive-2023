@@ -1,0 +1,150 @@
+﻿body {
+    background-color:green
+}
+
+img{
+    height: 128px;
+}
+
+#icongridsex{
+    display: grid -ms-grid;
+    grid-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#icongrid{
+    display: grid;
+    display: -ms-grid;
+    grid-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /*grid-template: 'hh' 'nm' 'ff';*/
+}
+
+.icongrideitem{
+    display:-ms-flexbox;
+    flex-direction: column;
+    column-gap: 100px;
+}
+
+#icongrider:nth-child(2){
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.icongriditem>*{
+}
+
+/*.icongrid:nth-child(1){
+    width: 0px;
+}
+
+.icongrid:nth-child(1){
+    width: 0px;
+}
+
+.icongriditem>p{
+    margin:auto;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.new{
+vertical-align: top;
+padding-top:10px;
+margin:0;
+}
+
+@media (min-width: 650px){
+    td { display: table-cell; }
+    #icongrid{
+        flex-direction: column;
+        column-gap: 0px;
+        column-count: 3;
+        flex-flow: 
+    }
+
+    .icongriditem{
+        flex-direction: row;
+        
+    }
+}*/
+
+/* Internet Explorer (inclusief hoog contrast modus) */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    h1 {
+        color: red;
+    }
+
+    #icongrid{
+        color:purple;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr 1fr;
+    }
+    #icongrid :nth-child(1){
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    #icongrid :nth-child(6){
+        -ms-grid-column: 2;
+        grid-column: 2;
+        -ms-grid-row: 1;
+        grid-row: 1;
+    }
+    
+    #icongrid:nth-child(2n+1){
+        color: blue;
+    }
+
+    #icongrid div:nth-child(1){
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    #icongrid div:nth-child(1){
+        -ms-grid-column: 2;
+        grid-column: 2;
+    }
+    #icongrid div:nth-child(1){
+        -ms-grid-column: 3;
+        grid-column: 3;
+    }
+
+    #icongrid :nth-child(3){
+        -ms-grid-row: 1;
+        grid-row: 1;
+    }
+    #icongrid :nth-child(3){
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+        grid-column: 1;
+        grid-row: 2;
+        color: blue;
+    }
+    #icongrid :nth-child(3){
+        grid-row: 3;
+        -ms-grid-row: 3;
+    }/*
+    #icongrid :nth-child(4){
+        grid-row: 4;
+        -ms-grid-row: 4;
+    }
+    #icongrid :nth-child(5){
+        -ms-grid-row: 5;
+    }
+    #icongrid :nth-child(6){
+        -ms-grid-row: 6;
+    }
+    #icongrid :nth-child(7){
+        -ms-grid-row: 1;
+    }*/
+}

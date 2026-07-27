@@ -1,0 +1,6 @@
+/*!* PopSicle v0.9.8 - jQuery Plugin
+* http://giologist.com
+* Developed by Gio~Logist, Powered by Awesomeness
+*
+* Copyright 2016 - GioLogist Incorporated
+* Licensed under the MIT license*/.Popsicle{display:none;position:absolute;padding:15px;border-radius:3px;background-color:#fff;box-shadow:0 2px 10px 0 rgba(0,0,0,.5)!important;z-index:3}.Popsicle:before{width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #fff;transform:rotate(-90deg);content:'';position:absolute;right:0;top:-13px;left:calc(50% - 5px);z-index:3}.Popsicle:after{width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid rgba(0,0,0,.1);transform:rotate(-90deg);content:'';position:absolute;right:0;top:-17px;left:calc(50% - 5px);z-index:1}.Popsicle.nt:after,.Popsicle.nt:before{display:none}

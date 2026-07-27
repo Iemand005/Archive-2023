@@ -1,0 +1,78 @@
+
+/* Music application for LVOS by Lasse © 2024 (10/1/2024 - 11/1/2024) */
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    pointer-events: all;
+    color: white;
+}
+
+canvas{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+button#play {
+    font-family: "Segoe UI Symbol";
+    font-size: 25px;
+    padding: 0;
+    line-height: 25px;
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+    line-height: 0px;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 5px;
+}
+
+form{
+    transition: all 300ms;
+    position: fixed;
+    /* background-color: rgba(0, 0, 0, 0.562); */
+    background: linear-gradient();
+    background: linear-gradient(0deg, transparent 1px, #000000b8 20px);
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+body.full > form{
+    opacity: 0;
+}
+
+body.full{
+    cursor: none;
+}
+
+#playcontrols{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#seek-output{
+    width: 0;
+    display: inline-block;
+}
+
+input[type=range], input[type=range]:focus::-webkit-slider-runnable-track, input[type=range]::-webkit-slider-runnable-track, input[type=range]::-moz-range-track, input[type=range]::-ms-track{
+    background: orange;
+}
+
+input[type=range]::-webkit-slider-thumb, input[type=range]::-moz-range-thumb{
+    
+}

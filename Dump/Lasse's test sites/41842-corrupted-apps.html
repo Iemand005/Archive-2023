@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+.gaussain-blur {
+  backdrop-filter:blur(35px);
+  height: 40px;
+  width: 100%;
+  position:fixed;
+  bottom: 0px;
+  overflow: hidden;
+  }
+.luminosity-blend { 
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat, repeat;
+  background-image: linear-gradient(to top,rgba(0, 0, 0, 0.0) 0%,rgba(5, 5, 5, 0.0) 100%);
+  background-blend-mode: luminosity;
+  overflow: hidden;
+}
+.color-blend {
+  height: 100%;
+  width: 100%;
+  background:rgba(40, 40, 37, 0.70);
+  overflow: hidden;
+}
+.noisemapt {
+  height: 1000px;
+  width: 1500px;
+  overflow: hidden;
+}
+.noisemap-icon {
+  height:2000px;
+  width:2000px;
+  opacity: 1;
+  position: absolute;
+}
+.background {
+  height: 50px;
+  width: 50px;
+  background-color: #000;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  margin: 10px;
+}
+.backplate {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.70);
+  overflow: hidden;
+  display: grid;
+}
+.hover-light {
+  position: absolute;
+  margin: -24px 0px 0px -24px; 
+  padding-bottom: 30px; padding-right: 30px; 
+  background: rgba(255, 255, 255, 0.7); 
+  border-radius: 25px; 
+  box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 6px 6px;
+}
+.content {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(0, 0, 255, 0.7);
+  overflow: hidden;
+  position: absolute;
+}
+.borders {
+  display: none;
+
+}
+.content:hover + .borders:hover + .borders {
+  display:block
+  height: 44px;
+  width: 44px;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  position: absolute;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgba(255,255,255,0.3);
+}
+</style>
+</head>
+<body style="margin: 0px">
+	<img style="width:100%;position: relative;" src="41842-corrupted-apps_files\fox.jpg" alt="Background">
+		<div class="gaussain-blur">
+			<div class="luminosity-blend">
+				<div class="color-blend">
+					<div class="noisemap">
+						<img style="left:0px" class="noisemap-icon" src="41842-corrupted-apps_files\noise.png" alt="Noise Texture">
+						<img style="left:2000px" class="noisemap-icon" src="41842-corrupted-apps_files\noise.png" alt="Noise Texture">
+						<img style="left:4000px" class="noisemap-icon" src="41842-corrupted-apps_files\noise.png" alt="Noise Texture">
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="background">
+		<div class="backplate">
+			<div id="hl" style="overflow:hidden;position:relative;width:50px;height:50px">
+				<div id="hi">
+<script type="text/javascript">
+
+var followCursor = (function() {
+  var s = document.createElement('div');
+
+  return {
+    init: function() {
+      document.body.appendChild(s);
+    },
+
+    run: function(e) {
+      document.getElementById("hi").remove();
+	  document.getElementById("hl").innerHTML = "<div id=hi class=hover-light style='top:"+(e.clientY + 'px')+";left:"+(e.clientX + 'px')+"'></div><div class='content' style='top:0px;left:0px;'></div><div class='borders'</div>";
+    }
+  };
+}());
+window.onload = function() {
+  followCursor.init();
+  document.body.onmousemove = followCursor.run;
+}
+</script>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

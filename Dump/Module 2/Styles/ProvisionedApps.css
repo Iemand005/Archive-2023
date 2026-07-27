@@ -1,0 +1,51 @@
+/*
+*
+ *
+  *   Provisioned app styling
+  *   Lasse Lauwerys © 2024
+ *
+*/
+
+form#applist{
+    flex-wrap: wrap;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* height: 2rem; */
+    flex-wrap: nowrap;
+}
+
+#console form, #metro > article > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+table{
+    width: 100%;
+}
+
+table > tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.123);
+}
+
+table > tr:nth-child(even) {
+    background-color: rgba(128, 128, 128, 0.123);
+}
+
+input {
+    pointer-events: auto !important;
+}
+
+#stdout > table {
+    display: flex;
+    flex-direction: column-reverse; /* I decided to flip it around instead of making it scroll because scrolling gives problem on some browsers. To avoid wasting time, I'm thus applying flex to the table. */
+}
+
+#stdin {
+    text-align: left;
+}

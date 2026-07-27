@@ -1,0 +1,407 @@
+
+/* General Properties */
+
+html, body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+*{
+  transition: all 200ms;
+}
+
+:root{
+  --dark: #333;
+  --dark-accent: #222;
+  --dark-foreground: #222;
+  --dark-shadow: #000;
+  --light: #f9f9f9;
+  --light-accent: #d4d4d4;
+  --foreground: white;
+  --shadow: #ddd;
+  --hover: rgb(255, 209, 111);
+  --active: rgb(255, 174, 0);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--light);
+}
+
+
+body:has(option#dark:checked), body:has(option#dark:checked) select{
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+body:has(option#dark:checked) h1, body:has(option#dark:checked) h2, body:has(option#dark:checked) h3, body:has(option#dark:checked) p{
+  color: var(--light);
+}
+
+body:has(option#dark:checked) figure{
+  background-color: var(--dark-foreground);
+  box-shadow: 7px var(--shadow) inset;
+}
+
+
+body:has(option#light:checked) h1, body:has(option#light:checked) h2, body:has(option#light:checked) h3, body:has(option#light:checked) p, body:has(option#light:checked) nav a, body:has(option#light:checked) svg{
+  color: var(--dark) ;
+  stroke: var(--dark);
+  fill: var(--dark);
+}
+
+body:has(option#light:checked) header, body:has(option#light:checked) footer, body:has(option#light:checked) select{
+  background-color: var(--light-accent);
+  color: var(--dark);
+}
+
+header, footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-accent);
+  color: var(--light-accent);
+  padding: .5rem 0;
+  text-align: center;
+}
+
+/* Header Styles */
+
+header {
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+header svg{
+  height: 100%;
+  stroke: var(--light-accent);
+  fill: var(--light-accent);
+}
+
+header ul{
+  height: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header > a{
+  margin: 0 1rem;
+  height: 3rem;
+  max-height: 64px;
+}
+
+nav ul {
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav li {
+  display: inline;
+  margin: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 125%;
+}
+
+nav a:hover, header svg:hover {
+  color: var(--hover);
+  stroke: var(--hover);
+  fill: var(--hover);
+  text-decoration: none;
+  font-size: 125%;
+}
+
+nav a:active, header svg:active {
+  color: var(--active) !important;
+  stroke: var(--active);
+  fill: var(--active);
+  text-decoration: none;
+  font-size: 125%;
+}
+
+nav a#selected {
+  color: var(--active) !important;
+  text-decoration: none;
+  font-size: 125%;
+}
+
+_:-ms-lang(x), select { display: none; }
+
+header select{
+  margin-right:0;
+}
+
+/* Main Styles */
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+main#macos img{
+  height: 10rem;
+  margin-left: 1rem;
+}
+
+figure{
+  box-shadow: 0 0 7px var(--shadow);
+  border-radius: 5px;
+  background-color: var(--foreground);
+}
+
+.iconprev figure {
+  width: 22%;
+  flex-grow: 1;
+  min-width: calc(128px + 2 * 40px);
+}
+
+.iconprev figure img {
+  max-width: 100%;
+  min-width: 128px;
+  height: auto;
+}
+
+.iconprev figure p {
+  margin-bottom: 10px;
+}
+
+main#macos article {
+  
+  margin-bottom: 1rem;
+}
+
+main#macos figure {
+  background-color: var(--color);
+  border: 1px solid var(--shadow);
+  box-shadow: 3px 4px 7px var(--accent);
+  border-radius: 5px;
+}
+
+main#macos figure {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--foreground);
+  padding: .8rem;
+  width: 100%;
+}
+
+main#macos figure, .iconprev figure, .imageprev{
+  text-align: center;
+  padding: 20px;
+  align-items: center;
+  overflow: hidden;
+  /*gap: 1rem; vervangen voor Edge*/
+  margin: .5rem;
+}
+
+.iconprev img{
+  max-height: 256px;
+  max-width: 256px;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+main#macos {
+  cursor: url(./Assets/Arrow.cur), auto;
+}
+
+main#macos h1, main#macos h2, main#macos p, main#macos time{
+  cursor: url(./Assets/MacOSSelect.cur), text;
+}
+
+main#macos a{
+  cursor: url(./Assets/MacOSLink.cur), text;
+}
+
+main#windows {
+  cursor: url(./Assets/WindowsDefault.cur), auto;
+}
+
+main#windows h1, main#windows h2, main#windows p, main#windows time{
+  cursor: auto;
+}
+
+.iconprev{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.imageprev{
+  display: flex;
+  flex-direction: column;
+}
+
+.imageprev *{
+  transition: all 600ms cubic-bezier(0.59, 0, 0.28, 1.34);
+}
+
+.imageprev figure{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  margin: 10px 0;
+  width: 100%;
+  box-shadow: 0 0 7px var(--shadow) inset;
+}
+
+.imageprev figure:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.imageprev label{
+  width: 35%;
+  min-width: 128px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.imageprev label:hover img{
+  filter: brightness(50%)
+}
+
+.imageprev figcaption{
+  width: 65%;
+  max-height: calc(((100vw - ((20px * 4) + (8px * 4))) / 837 * 470) + 40px); /* Ik heb de aspect ratio van de afbeeldingen genomen want anders overloopt de tekst. */
+  overflow-y: auto;
+  display:flex;
+  flex-direction: column;
+}
+
+.imageprev figcaption > *:first-child{
+  padding-top: 10px;
+}
+
+.imageprev figcaption > *:last-child{
+  padding-bottom: 10px;
+}
+
+.imageprev figure figcaption > *{
+  margin: 0 15px;
+}
+
+.imageprev figure figcaption, .imageprev figure label{
+  transition: all 600ms cubic-bezier(0.59, 0, 0.28, 1.34);
+}
+
+.imageprev input:checked + label, .imageprev input:checked + label + figcaption {
+  transition: all 600ms ease-in-out;
+}
+
+.imageprev input:checked + label {
+  width: 100%;
+  padding:0;
+  border-radius: 5px;
+}
+.imageprev input:checked + label img{
+  filter: brightness(100%) !important;
+}
+
+.imageprev input:checked + label + figcaption {
+  width: 0%;
+  height: 0%;
+  overflow: hidden !important;
+}
+
+.imageprev img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.imageprev input{
+  display: none;
+}
+
+img{
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Footer Styles */
+
+footer *{
+  margin: 0 2rem;
+}
+
+footer > select{
+  background-color: var(--dark);
+  color: var(--light-accent);
+}
+
+/* Media Queries */
+
+@media (prefers-color-scheme: dark){
+
+  body:has(option#system:checked) header, body:has(option#system:checked) footer{
+    background-color: var(--dark-accent) !important;
+    color: var(--light) !important;
+  }
+  body:has(option#system:checked){
+    background-color: var(--dark);
+    color: var(--light-accent) !important;
+  }
+  body:has(option#system:checked), body:has(option#dark:checked) h1, body:has(option#dark:checked) h2, body:has(option#dark:checked) p{
+    color: var(--light) !important;
+    stroke: var(--light);
+    fill: var(--light);
+  }
+
+  body:has(option#system:checked) figure{
+    background-color: var(--dark-foreground);
+    box-shadow: 7px var(--shadow) inset;
+  }
+
+  :root{
+    /*--dark: red;*/
+  }
+}
+
+@media (prefers-color-scheme: light){
+  body:has(option#light:checked) h1, body:has(option#light:checked) h2, body:has(option#light:checked) h3, body:has(option#light:checked) p, body:has(option#light:checked) nav a, body:has(option#light:checked) svg{
+    color: var(--dark) ;
+    stroke: var(--dark);
+    fill: var(--dark);
+  }
+  
+  body:has(option#light:checked) header, body:has(option#light:checked) footer, body:has(option#light:checked) select{
+    background-color: var(--light-accent);
+    color: var(--dark);
+  }
+}
+
+@media (max-width: 750px){
+  .imageprev figure {
+    flex-direction: column !important;
+  }
+  .imageprev figure label:hover img{
+    filter: none;
+  }
+  .imageprev figure label, .imageprev figure figcaption, .imageprev input:checked + label + figcaption {
+    width: 100%;
+  }
+
+  .imageprev label{
+    pointer-events:none;
+  }
+}

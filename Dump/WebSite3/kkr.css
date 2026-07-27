@@ -1,0 +1,258 @@
+﻿body {
+    background-color:green;
+    margin: 8px;
+}
+
+h3{
+    text-align: center;
+}
+
+img{
+    height: 128px;
+}
+
+.icongridsex{
+    display: grid -ms-grid;
+    grid-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.icongridi{
+    display: grid;
+    display: -ms-grid;
+    grid-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /*grid-template: 'hh' 'nm' 'ff';*/
+}
+
+.icongrideitem{
+    display: flex;
+    display:-ms-flexbox;
+    flex-direction: column;
+    column-gap: 100px;
+}
+
+.icongrider:nth-child(2){
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.icongriditem>*{
+}
+
+/*.icongrid:nth-child(1){
+    width: 0px;
+}
+
+.icongrid:nth-child(1){
+    width: 0px;
+}
+
+.icongriditem>p{
+    margin:auto;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.new{
+vertical-align: top;
+padding-top:10px;
+margin:0;
+}
+
+@media (min-width: 650px){
+    td { display: table-cell; }
+    .icongrid{
+        flex-direction: column;
+        column-gap: 0px;
+        column-count: 3;
+        flex-flow: 
+    }
+
+    .icongriditem{
+        flex-direction: row;
+        
+    }
+}*/
+
+h1{
+    text-align:center;
+}
+
+.ietableview{
+    display: table;
+    align-self: center;
+    margin:0 auto;
+    background:#000;
+    color: orange;
+}
+
+body .icongrid div{
+    display: flex;
+    align-self: center;
+    margin:0 auto;
+    background:#000;
+}
+/*body .icongrid{
+    margin: 50px
+}*/
+
+/* Internet Explorer (inclusief hoog contrast modus) */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+}
+
+    h1 {
+        color: red;
+    }
+
+    .icongrid {
+        color: purple;
+        display: flex;
+        display: -ms-flexbox;
+    }
+
+        .icongrid > div {
+            display: flex;
+            display: -ms-flexbox;
+            
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+            .icongrid > div > * {
+                /*border: 1px solid red;*/
+                outline: 1px solid red;
+                padding: 10px;
+                vertical-align: middle;
+                margin-top: 1px;
+                margin-left: 1px;
+                text-align: center;
+            }
+
+        .icongrid h3 {
+            margin-bottom: 0;
+        }
+
+        .icongrid p, .icongrid h4 {
+            margin: auto;
+            position: relative;
+            line-height: 128px;
+            margin: 1px 0 0 1px;
+        }
+
+        .icongrid > div > div {
+            height: 128px;
+            /*
+        display: block;
+        position: relative;*/
+            line-height: 128px;
+        }
+
+    img {
+        height: 128px;
+        width: 128px;
+    }
+
+    @media (min-resolution: 72dpi){
+        body{
+            background-color: purple
+        }
+    }
+
+    @media (min-width: 40rem) {
+        img {
+            height: 256px;
+            width: 256px;
+        }
+
+        .icongrid h4 {
+            line-height: 256px;
+            height: 256px;
+        }
+    }
+
+    @media (min-width: 800px) {
+        img {
+            height: 128px;
+            width: 128px;
+        }
+
+        td {
+            display: table-cell;
+        }
+
+        .icongrid {
+            
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+            .icongrid > div {
+                
+                -ms-flex-direction: row;
+                flex-direction: row;
+            }
+
+                .icongrid > div > div {
+                    width: 128px;
+                    /*auto;*/
+                    height: auto;
+                    display: none;
+                    /*line-height: 16px;*/
+                }
+
+        h3 {
+            display: none;
+        }
+
+        .icongrid p, .icongrid h4 {
+            line-height: normal;
+            width: 128px;
+            height: auto;
+            /*margin-bottom: 0px;
+        margin-right: 0;
+        margin-left: 0;*/
+            padding: 10px;
+            /*line-height: 16px;*/
+        }
+        /*.icongride>div>p{
+        width: 128px;
+        height: auto;
+        /*line-height: normal;*/
+        /*margin: auto;
+        padding: 0;
+    }*/
+    }
+    /*
+@media (max-width: 650px){
+    .icongrid > div > div{
+        height: 128px;
+        /*
+        display: block;
+        position: relative;*/ /*
+        line-height: 128px;
+    }
+}*/
+
+                                  @media (min-width: 90rem) {
+        img {
+            height: 256px;
+            width: 256px;
+        }
+
+        .icongrid h4 {
+            width: 256px;
+
+        }
+    }

@@ -1,0 +1,394 @@
+
+/* General */
+
+html, body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    width: 100%;
+    animation: all 1s ease-in-out 0;
+    transition: all 1s;
+}
+
+body > header, body > footer, header.hidden{
+    display: none;
+}
+
+html, body, main, main > section, main > section > section{
+    overflow: hidden;
+}
+
+body{
+    pointer-events: none;
+    /* transform: rotateY(180deg); */
+    perspective: 1000px;
+    background-color: black;
+    background: radial-gradient(#333, black);
+}
+
+dialog *, #desktop, #desktop img{
+    -moz-user-select: none;
+    -moz-user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -o-user-drag: none;
+    user-select: none;
+}
+
+/* Main */
+
+main{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    perspective: 1000px;
+}
+
+dialog{
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    background-color: rgba(255, 255, 255, 255);
+    -o-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    transform-origin: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+    position: absolute;
+    background: transparent;
+    border: none;
+    padding: 0;
+    transition: all 500ms ease-in-out, top 0, left 0, width 0, height 0;
+    transition: border-radius 500ms ease-in-out;
+    overflow: visible; /* Here is thus where we solve that bug in Edge where the backdrop is shifted when an item is moved behind the left border. This is a messy solution but works better than having no shadows due to the backdrop shifting from shadows too! */
+}
+
+dialog header{
+    margin: 0;
+    /*display: flex;*/
+    pointer-events: none !important;
+    justify-content: space-between;
+    padding: 10px;
+    border: inherit;
+    border-style: none;
+    border-width: inherit;
+    border-color: inherit;
+}
+
+dialog header, dialog header section{ /* I want to forward the borders to the children so there is no visible border in case there aren't any visible buttons. Applying border to button wrapper would cause a 2px black line to remain. */
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+dialog header section{
+    -webkit-transition: all 700ms ease-out;
+    -moz-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: auto;
+    /*border: 1px solid black;*/
+    border: inherit;
+    border-width: inherit;
+    border-color: inherit;
+}
+
+dialog header button {
+    width: 30px;
+    height: 30px;
+    font-family: sans-serif;
+    transition: inherit;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 0;
+    border: none;
+    border-bottom-left-radius: inherit;
+    /*border-top: none !important;
+    border-right: none !important;*/
+    /* border: 1px solid black;/ */
+    border: inherit;
+    border-style: solid;
+    border-width: inherit;
+    border-color: inherit;
+    border: 1px solid black;
+}
+
+dialog header button:not(:disabled) ~ button:not(:disabled){
+    border-bottom-left-radius: 0px;
+    border-left: none;
+}
+
+dialog header button:disabled{
+    outline: none;
+    width: 0px;
+    transition: all 500ms ease-out, border 10s ease 1s;
+    font-size: 0px;
+    border: none;
+    margin: 0;
+}
+
+dialog header > h1{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
+
+dialog > content{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    border-radius: inherit;
+    border: 1px solid black;
+    padding: 5px;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    background-color: orange;
+    transition: inherit;
+}
+
+iframe{
+    border: 0;
+}
+
+input{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* text-align: center; */
+    align-items: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.758);
+}
+
+input[type=checkbox]{
+    width: unset;
+}
+
+template{
+    display: none; /* Internet Explorer 11 does not seem to know template, so for all browsers that don't support this it'll be hidden anyways. */
+}
+
+article{
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+dialog > div{
+    position: absolute;
+    pointer-events: auto;
+}
+
+dialog > div:nth-of-type(odd){
+    width: 100%;
+}
+
+dialog > div:nth-of-type(even){
+    height: 100%;
+}
+
+
+dialog > div, dialog > div:nth-of-type(n + 5){
+    width: 5px;
+    height: 5px;
+}
+
+dialog > div:nth-of-type(1){
+    top: 0;
+    left: 0;
+    cursor: n-resize;
+}
+
+dialog > div:nth-of-type(2){
+    top: 0;
+    right: 0;
+    cursor: w-resize;
+}
+
+dialog > div:nth-of-type(3){
+    bottom: 0;
+    left: 0;
+    cursor: s-resize;
+}
+
+dialog > div:nth-of-type(4){
+    top: 0;
+    left: 0;
+    cursor: e-resize;
+}
+
+dialog > div:nth-of-type(5){
+    top: 0;
+    left: 0;
+    cursor: nw-resize;
+}
+
+dialog > div:nth-of-type(6){
+    top: 0;
+    right: 0;
+    cursor: ne-resize;
+}
+
+dialog > div:nth-of-type(7){
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+}
+
+dialog > div:nth-of-type(8){
+    bottom: 0;
+    left: 0;
+    cursor: sw-resize;
+}
+
+dialog[open]{
+    animation: opening 500ms ease-out forwards;
+    pointer-events: auto;
+}
+
+dialog:not([open]){
+    transform-origin: center;
+    animation: closing 400ms cubic-bezier(0, 0, 0.5 , 1) forwards;
+    display: block; /* The display attribute is set to none by default */
+    z-index: -1000;
+    /*pointer-events: none !important;*/
+}
+
+dialog:not([open]), dialog:not([open]) > content, dialog:not([open]) > div, dialog:not([open]) > content > article, dialog:not([open]) > content > article * {
+    pointer-events: none !important; /*  Disable the pointer events on all interactable children. Some older browsers I tested like Chrome 48 and IE11 don't disable the pointer events for the children when a parent is set do none. */ /**/
+}
+
+ /*{
+    pointer-events: none !important;
+}*/
+
+dialog > content > article{
+    border: inherit;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    pointer-events: auto;
+    display: flex;
+    z-index: 1;
+    transition: inherit;
+    /* box-sizing: content-box; Allows us to resize the window from the inside without extra calculations. */
+}
+
+dialog > content > article > *, dialog > content > article > iframe {
+    background-color: rgba(0, 0, 0, 0.267);
+    box-shadow: inset 0px 0px 10px black;
+    z-index: -1; /* By setting z-index of the container to 1 and the iframe or other interactive content to -1 we can mask this when pointer-events are set to "none". If we don't do this we can't capture the events in Internet Explorer 11 because the iframe is then on top of the container (because the opening tag is below it in HTML) and captures the mousemove events but throws them away causing the windows to stop following the mouse when the cursor goes over any dialog body which gives the illusion of the prescense of lag. */
+    vertical-align: bottom;
+}
+
+dialog[full]{
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+article > *{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+section#desktop{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    z-index: -100;
+}
+
+.acrylic{
+    background-color: rgba(0, 0, 0, 0.507);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.acrylic::before{
+    pointer-events: none;
+    content: "";
+    opacity: 4;
+    z-index: 2;
+    background-image: url("./Assets/Noise.png");
+    width: 100%;
+    height: 100%;
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0.219);
+    border: 1px solid black;
+    text-rendering: geometricPrecision;
+    pointer-events: auto !important;
+}
+
+button:hover{
+    background-color: rgba(153, 153, 153, 0.219);
+}
+
+@keyframes opening {
+    from {
+        opacity: 0;
+        transform: perspective(4cm) rotateX(5deg) translateZ(-2cm) translateY(-1cm);
+    }
+}
+
+@keyframes closing {
+    99% {
+        opacity: 0;
+        transform: perspective(4cm) rotateX(5deg) rotateY(1deg) translateZ(-2cm) translateY(-2cm);
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+@supports (backdrop-filter: none) or (-webkit-backdrop-filter: none) {
+    body[blur] dialog > content{
+        background-color: rgba(255, 255, 255, 0.267);
+    }
+}
+
+@supports (-webkit-backdrop-filter: none) {
+    body[blur] dialog > content{ /* Moving the blur from the dialog to the content to work around graphical bug in EdgeHTML 18 */
+        -webkit-backdrop-filter: saturate(150%) blur(10px); /* For older versions of webkit browsers like Edge, Chrome and Safari */
+    }
+}
+
+@supports (backdrop-filter: none){
+    body[blur] dialog > content{
+        backdrop-filter: saturate(150%) blur(10px) !important;
+    }
+}

@@ -1,0 +1,114 @@
+html, body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Header Styles */
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  height: 3rem;
+  display: flex;
+  padding: .5rem;
+}
+
+header svg{
+  height: 100%;
+}
+header ul{
+  height: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+header li{
+  margin: auto;
+}
+
+header nav {
+  margin-left: 1rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main Styles */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+main#macos img{
+  height: 10rem;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+
+
+
+
+ /* Basic Reset */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+main#macos article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+main#macos figure {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: .8rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-left: 1rem;
+  width: 100%;
+  box-shadow: 10px 10px 8px #888888;
+  box-shadow: 3px 4px 7px #c1c1c1;
+}
+
+main#macos img {
+  margin-left: 1rem;
+}

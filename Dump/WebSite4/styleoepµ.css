@@ -1,0 +1,31 @@
+﻿* {
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    
+    display: flex;
+    position: relative;
+    right:0;
+    left:0;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    background-color:red;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flexbox;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-decoration: inherit ;
+    color: wheat;
+}

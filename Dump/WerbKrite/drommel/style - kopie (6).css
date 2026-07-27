@@ -1,0 +1,157 @@
+a{
+    width: 100%;
+    height: 100%;
+    background-color: #00000038;
+    z-index: 1;
+    color: white;
+    font-weight: 50;
+    font-size: 10px;
+    line-height: 39px;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.226);
+    transition: all 100ms;
+}
+
+a>label>h1{
+    height: 100%;
+    user-select: none;
+}
+
+input{
+    display: none;
+}
+a:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+a:active{
+    background-color: rgba(255, 255, 255, 0.01);
+}
+input:checked + a{
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    z-index: 3;
+}
+
+input{
+    z-index: 0;
+}
+
+input:checked +a>label{
+    z-index: 100;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 39px;
+    padding: 0 100px 0 10px 0;
+    top:0;
+    gap:-10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.507);
+    box-shadow: 0 -7px 9px -7px rgba(0,0,0,0.9);
+}
+
+header::before{
+    width: 100%;
+    content: "";
+    position: absolute;
+    height: 39px;
+    opacity: 0.04;
+    z-index: 0;
+    background-image: url("./NoiseAsset.png");
+}
+
+.acrylic{
+
+}
+
+.acrylic::before{
+    content: "";
+    position: absolute;
+    opacity: 0.04;
+    z-index: 0;
+    background-image: url("./NoiseAsset.png");
+}
+
+html,body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    margin: auto;
+    width: fit-content;
+}
+
+header > img{
+    position: absolute;
+    background-repeat: repeat;
+    display: none;
+}
+
+main{
+    margin-top: 39px !important;
+    padding: 10px;
+}
+
+:root{
+    --cube-size: 40px;
+    --face-offset:calc(var(--cube-size)/2);
+}
+
+@keyframes spincube {
+    50% { transform: rotateX(360deg) rotateY(-360deg); }
+}
+
+.cube{
+    height: var(--cube-size);
+    width: var(--cube-size);
+    
+    animation: spincube 5s ease-in-out infinite;
+    transform-style: preserve-3d;
+    /*transform-origin: var(--cube-size) var(--cube-size) 0;*/
+}
+
+.cube > div{
+    background-color: brown;
+    height: var(--cube-size);
+    width: var(--cube-size);
+    position: absolute;
+}
+
+.cube > .front{
+    transform: translateZ(var(--face-offset));
+    background-color: red;
+}
+
+.cube > .right{
+    transform: rotateY(90deg) translateZ(var(--face-offset));
+    background-color: green;
+}
+
+.cube > .top{
+    transform: rotateY(0deg) rotateX(90deg) translateZ(var(--face-offset));
+    background-color: blue;
+}
+
+.cube > .back{
+    transform: rotateY(180deg) translateZ(var(--face-offset));
+    background-color: orange;
+}
+
+.cube > .bottom{
+    transform: rotateX(-90deg) rotateZ(0deg) translateZ(var(--face-offset));
+    background-color: yellow;
+}
+
+.cube > .left{
+    transform: rotateY(-90deg) translateZ(var(--face-offset));
+    background-color: purple;
+}

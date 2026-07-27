@@ -1,0 +1,222 @@
+
+
+div.segmentdisplay{
+    width: 10px;
+    height: 10px;
+    border-color: red;
+    margin-right: 16px;
+    margin-right: 13px;
+    margin-left: 3px;
+    display: inline-block;
+}
+
+
+
+/* Scaling is done here, the values can be adjusted to make displays of specific sizes. The JavaScript scaling function doesn't work yet because I don't know how to apply it to all the after pseudo elements yet. */
+
+div.segmentdisplay > div{
+    border-width: 3px;
+}
+
+div.segmentdisplay > div.segmentx, div.segmentdisplay > div:nth-child(3n + 1){
+    margin-left: 3px;
+    /* border-color: aqua; */
+}
+
+div.segmentdisplay > div.segmentx:after, div.segmentdisplay > div:nth-child(3n + 1):after{
+    margin-top: 3px;
+    margin-left: -3px;
+    border-top-width: 3px;
+}
+
+div.segmentdisplay > div.segmenty:after{
+    margin-top: -3px;
+    margin-left: 3px;
+    margin-bottom: -3px;
+    border-left-width: 3px;
+}
+
+div.segmentdisplay > div.segmentr{
+    margin-left: 16px; /* Width plus 2 times the weight */
+    margin-top: -16px; /* Negative height plus 2 times the weight */
+}
+
+div.segmentdisplay > div.segmenth{
+    margin-top: -3px; /* 2 times the weight */
+}
+
+/* Fixed styles, these don't affect the clock for customisation but are required for it to look right so we don't need to modify these. */
+
+div.segmentdisplay > div{
+    display: block;
+    border-style: solid;
+    border-color: inherit;
+    width: inherit;
+    height: inherit;
+}
+
+div.segmentdisplay > div:after{
+    content: "";
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    border: inherit;
+    /* opacity: inherit; */
+}
+
+div.segmentdisplay > div:after{
+    opacity: inherit; /* I need this on IE11 for some reason! */
+}
+
+/*div.singular.segmentdisplay > div:first-child{
+    margin-top: -2.5px;
+}*/
+
+/*article.original > output{
+    padding-top: 5px;
+}*/
+
+div.segmentdisplay > div.segmentx, div.segmentdisplay > div:nth-child(3n + 1){
+    height: 0;
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    border-top-width: 0 !important;
+}
+
+div.segmentdisplay > div.segmentx:after, div.segmentdisplay > div:nth-child(3n + 1):after{
+    border-bottom: 0;
+    border-top-color: inherit;
+}
+
+div.segmentdisplay > div.segmenty{
+    width: 0 !important;
+    border-bottom-color: transparent !important;
+    border-top-color: transparent !important;
+    border-left-width: 0 !important;
+}
+
+div.segmentdisplay > div.segmenty:after{
+    border-right-width: 0 !important;
+}
+
+div.segmentdisplay > div:nth-child(4):after{
+    margin-top: 3px;
+    border-top-width: 3px;
+    margin-left: -3px;
+    border-bottom-width: 0;
+}
+
+div.segmentdisplay.singular{
+    margin-right: 2px;
+    margin-left: 3px;
+    margin: 2px;
+}
+
+div.segmentdisplay.singular > div{
+    width: 0px;
+    border-color: transparent;
+    border-left-color: inherit;    box-sizing: border-box;
+    margin-bottom: -2px;
+    margin-bottom: -3px;
+    margin-bottom: -0.5px;
+
+}
+
+div.segmentdisplay.singular > div:first-child{
+    /* margin-top: 3px; */
+    border-top-width: 3px !important;
+    /* margin-left: -3px; */
+    border-bottom-width: 0;
+    border-top-color: inherit;
+    width: inherit;
+    margin-left: 0;
+    margin-left: 0.5px;
+    margin-bottom: -2.5px;
+}
+
+div.segmentdisplay.singular > div:nth-child(2n + 1){
+    /* margin-top: 3px; */
+    border-top-width: 3px !important;
+    /* margin-left: -3px; */
+    /* border-bottom-width: 0; */
+}
+
+div.segmentdisplay.singular > div:nth-child(3n + 3){
+    margin-top: -14px;
+    margin-left: -2px;
+    border-right-color: red;
+    border-left-color: transparent;
+    margin-left: 9px;
+    margin-top: -10px;
+    border-left-width: 0;
+    margin-left: 7px;
+    margin-left: 8px;
+    margin-left: 8.5px;
+}
+
+div.segmentdisplay.singular > div:nth-child(3n + 1){
+    width: inherit;
+}
+
+div.segmentdisplay.singular > div:nth-child(4){
+    border-top-color: rebeccapurple;
+    border-width: 3px;
+    height: 1.5px;
+    border-width: 1.5px;
+    /* border-left-width: 3px;
+    border-right-width: 3px; */
+    /* height: 10px; */
+    /* border: 10px solid red; */
+    border-bottom-color: red;
+    /* border-style: solid;*/
+    
+    border-color: inherit;
+    margin-left: 0;
+    width: inherit;
+    margin-left: 1px;
+    border-width: 2px;
+
+    margin-top: -1.5px;
+    margin-bottom: -1px;
+    margin-left: 1.5px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    width: 8.5px;
+    width: 9.5px;
+    margin-left: 1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+div.segmentdisplay.singular > div:nth-child(5){
+    margin-top: 2px;
+}
+
+
+div.segmentdisplay.singular > div:last-child{
+    border-bottom-color: red !important;
+    /* border-bottom-width: 3px; */
+    margin-left: 0px;
+    margin-top: -5px;
+    margin-left: 0.5px;
+}
+
+div.segmentdisplay.singular > div:after{
+    display: none;
+}
+
+div.segmentdisplay.singular > div:nth-child(4):after{
+    display: block;
+    box-sizing: inherit;
+    border-width: inherit;
+    border-width: 2px;
+    margin-top: 1.5px;
+    margin-left: -1.5px;
+    /* border-left-width: 3px;
+    border-right-width: 3px; */
+    border-bottom-color: red;
+    border-color: inherit;
+    margin-top: 2px;
+    margin-left: -2px;
+    /* border: inherit; */
+}

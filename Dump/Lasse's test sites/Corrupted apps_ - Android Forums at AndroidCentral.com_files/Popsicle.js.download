@@ -1,0 +1,10 @@
+/*!
+* PopSicle v0.9.8 - jQuery Plugin
+* http://giologist.com
+* Developed by Gio~Logist, Powered by Awesomeness
+*
+* Copyright 2016 - GioLogist Incorporated
+* Licensed under the MIT license
+*/$('[data-Popsicle]').click(function(e){PopsicleID='#'+$(this).attr('data-Popsicle');if($(PopsicleID).css('display')=='block'){$(PopsicleID).hide();return false;}
+$('.Popsicle').hide();PopsicleStickOffset=$(this).offset();PopsicleStickWidth=$(this).outerWidth();PopsicleStickHeight=$(this).outerHeight();PopsicleWidth=$(PopsicleID).outerWidth();PopsicleYpadding=15;var PopSicleLeftOffset=PopsicleStickOffset.left+(PopsicleStickWidth/2)-(PopsicleWidth/2);if((PopsicleWidth+PopSicleLeftOffset)>$(document).outerWidth()){$(PopsicleID).addClass('nt');if(PopSicleLeftOffset<0){PopSicleLeftOffset=0;}else{PopSicleLeftOffset=$(document).outerWidth()-PopsicleWidth;}}else{$(PopsicleID).removeClass('nt');}
+$(PopsicleID).show();$(PopsicleID).offset({top:PopsicleStickOffset.top+PopsicleStickHeight+PopsicleYpadding,left:PopSicleLeftOffset});e.stopPropagation();return false;});$('.Popsicle').click(function(e){e.stopPropagation();});$(document).on('click',function(e){$('.Popsicle').hide();});

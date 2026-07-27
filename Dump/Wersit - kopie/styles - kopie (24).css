@@ -1,0 +1,558 @@
+
+/* General Properties */
+
+html, body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+*{
+  transition: all 200ms;
+}
+
+:root{
+  --dark: #333;
+  --dark-accent: #222;
+  --dark-foreground: #222;
+  --dark-light-shadow: #000;
+  --dark-hover: #ffcb5b;
+  --dark-active: #ffae00;
+  --light: #f9f9f9;
+  --light-accent: #d4d4d4;
+  --light-foreground: #fff;
+  --light-shadow: #ddd;
+  --light-hover: #bb8000;
+  --light-active: #c58700;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--light);
+}
+
+
+body:has(option#dark:checked), body:has(option#dark:checked) select{
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+body:has(option#dark:checked) audio{
+  color-scheme: dark;
+}
+
+body:has(option#dark:checked) h1, body:has(option#dark:checked) h2, body:has(option#dark:checked) h3, body:has(option#dark:checked) p{
+  color: var(--light);
+}
+
+body:has(option#dark:checked) figure{
+  background-color: var(--dark-foreground);
+  box-shadow: 3px 4px 7px var(--dark-shadow);
+  border: 1px solid var(--dark-accent);
+}
+
+body:has(option#dark:checked) .imageprev figure{
+  box-shadow: 7px var(--dark-accent) inset;
+}
+
+body:has(option#light:checked) h1, body:has(option#light:checked) h2, body:has(option#light:checked) h3, body:has(option#light:checked) p, body:has(option#light:checked) nav a, body:has(option#light:checked) svg{
+  color: var(--dark) ;
+  stroke: var(--dark);
+  fill: var(--dark);
+}
+
+body:has(option#light:checked) header, body:has(option#light:checked) footer, body:has(option#light:checked) select{
+  background-color: var(--light-accent);
+  color: var(--dark);
+}
+
+body:has(option#light:checked) a:hover{
+  color: var(--light-hover);
+}
+
+header, footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-accent);
+  color: var(--light-accent);
+  padding: .5rem 0;
+  text-align: center;
+}
+
+/* Header Styles */
+
+header {
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+header svg{
+  height: 100%;
+  width: 64px;
+  stroke: var(--light-accent);
+  fill: var(--light-accent);
+}
+
+header ul{
+  height: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header > a{
+  margin: 0 1rem;
+  height: 3rem;
+  max-height: 64px;
+}
+
+nav ul {
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav li {
+  display: inline;
+  margin: 10px;
+}
+
+nav a {
+  color: var(--light-foreground);
+  text-decoration: none;
+  font-size: 125%;
+}
+
+nav a:hover, header svg:hover {
+  color: var(--light-hover);
+  stroke: var(--light-hover);
+  fill: var(--light-hover);
+  text-decoration: none;
+  font-size: 125%;
+}
+
+nav a:active, header svg:active {
+  color: var(--light-active) !important;
+  stroke: var(--light-active);
+  fill: var(--light-active);
+  text-decoration: none;
+  font-size: 125%;
+}
+
+nav a#selected {
+  color: var(--light-active) !important;
+  text-decoration: none;
+  font-size: 125%;
+}
+
+_:-ms-lang(x), select { 
+  display: none;
+}
+
+header select{
+  margin-right:0;
+}
+
+/* Main Styles */
+
+main {
+  padding: 20px;
+}
+
+main{
+  flex-shrink: 0; /* Fixes weird overlap in IE11 */
+}
+
+article{
+  flex-shrink: 0;
+}
+
+audio{
+  margin: 0px 0;
+  border-radius: 5px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.iconprev figure {
+  width: 22%;
+  flex-grow: 1;
+  min-width: calc(128px + 2 * 40px);
+}
+
+.iconprev figure img {
+  max-width: 100%;
+  min-width: 128px;
+  height: auto;
+}
+
+.iconprev figure p {
+  margin-bottom: 10px;
+}
+
+main#macos article {
+  
+  margin-bottom: 1rem;
+}
+
+main figure {
+  background-color: var(--light-foreground);
+  border: 1px solid var(--light-accent);
+  box-shadow: 3px 4px 7px var(--light-shadow);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+main#macos figure {
+  display: flex;
+  /*gap: 2rem;*/
+  margin: 1rem;
+  background-color: var(--light-foreground);
+  /*padding: .8rem;*/
+  width: 100%;
+  justify-content: space-around;
+}
+
+main#macos figure, .iconprev figure, .imageprev{
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  /*gap: 1rem; vervangen voor Edge*/
+  margin: .5rem;
+}
+
+main#macos article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main#macos img, main#macos figcaption{
+  margin: 1rem;
+}
+
+main#macos {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+aside{
+ 
+}
+
+aside a{
+  text-decoration: none;
+}
+
+main#macos img{
+  height: 10rem;
+}
+
+.iconprev img{
+  max-height: 256px;
+  max-width: 256px;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+main#macos {
+  cursor: url(./Assets/Arrow.cur), auto;
+}
+
+main#macos h1, main#macos h2, main#macos p, main#macos time{
+  cursor: url(./Assets/MacOSSelect.cur), text;
+}
+
+main#macos a{
+  cursor: url(./Assets/MacOSLink.cur), text;
+}
+
+main#windows {
+  cursor: url(./Assets/WindowsDefault.cur), auto;
+}
+
+main#windows h1, main#windows h2, main#windows h3, main#windows p, main#windows time{
+  cursor: auto;
+}
+
+.iconprev{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.imageprev{
+  display: flex;
+  flex-direction: column;
+}
+
+.imageprev *{
+  transition: all 600ms cubic-bezier(0.59, 0, 0.28, 1.34);
+}
+
+.imageprev figure{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  margin: 10px 0;
+  width: 100%;
+  box-shadow: 0 0 7px var(--light-shadow) inset;
+}
+
+.imageprev figure:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.imageprev label{
+  width: 35%;
+  min-width: 128px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.imageprev label:hover img{
+  filter: brightness(50%)
+}
+
+.imageprev figcaption{
+  width: 65%;
+  max-height: 35vw; /* Formule met aspect ratio was overbodig, lijkt ook te werken zo. */
+  overflow-y: auto;
+  display:flex;
+  flex-direction: column;
+}
+
+.imageprev figcaption > *:first-child{
+  padding-top: 10px;
+}
+
+.imageprev figcaption > *:last-child{
+  padding-bottom: 10px;
+}
+
+.imageprev figure figcaption > *{
+  margin: 0 15px;
+}
+
+.imageprev figure figcaption, .imageprev figure label{
+  transition: all 500ms cubic-bezier(0.49, 0.02, 0.17, 1.28);
+}
+
+.imageprev input:checked + label, .imageprev input:checked + label + figcaption {
+  transition: all 600ms ease-in-out;
+  border-radius: 0;
+}
+
+.imageprev input:checked + label {
+  width: 100%;
+}
+.imageprev input:checked + label img{
+  filter: brightness(100%) !important;
+}
+
+.imageprev input:checked + label + figcaption {
+  width: 0%;
+  height: 0%;
+  overflow: hidden !important;
+}
+
+.imageprev img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.imageprev input{
+  display: none;
+}
+
+img{
+  object-fit: contain;
+  pointer-events: none;
+}
+
+#sounds figure{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 60px;
+}
+
+#sounds figcaption{
+  margin: 0 20px;
+}
+
+/* Footer Styles */
+
+footer *{
+  margin: 0 2rem;
+}
+
+footer > select{
+  background-color: var(--dark);
+  color: var(--light-accent);
+}
+
+/* Media Queries */
+
+@media (prefers-color-scheme: dark){
+
+  body:has(option#system:checked) header, body:has(option#system:checked) footer{
+    background-color: var(--dark-accent) !important;
+    color: var(--light) !important;
+  }
+  body:has(option#system:checked){
+    background-color: var(--dark);
+    color: var(--light-accent) !important;
+  }
+
+  /* Het is niet noodzakelijk alles hier te vermelden, maar de belangrijke tags in de query toevoegen maakt het veel sneller voor de eindgebruiker. */
+  body:has(option#system:checked), body:has(option#system:checked) h1, body:has(option#system:checked) h2, body:has(option#system:checked) h2, body:has(option#system:checked) p{
+    color: var(--light) !important;
+    stroke: var(--light);
+    fill: var(--light);
+  }
+
+  body:has(option#system:checked) figure{
+    background-color: var(--dark-foreground);
+    box-shadow: 3px 4px 7px var(--dark-shadow);
+    border: 1px solid var(--dark-accent);
+  }
+
+  body:has(option#system:checked) .imageprev figure{
+    box-shadow: 7px var(--dark-accent) inset;
+  }
+
+  body:has(option#system:checked) audio{
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light){
+  body:has(option#system:checked) h1, body:has(option#system:checked) h2, body:has(option#system:checked) h3, body:has(option#system:checked) p, body:has(option#system:checked) nav a, body:has(option#system:checked) svg{
+    color: var(--dark) ;
+    stroke: var(--dark);
+    fill: var(--dark);
+  }
+  
+  body:has(option#system:checked) header, body:has(option#system:checked) footer, body:has(option#system:checked) select{
+    background-color: var(--light-accent);
+    color: var(--dark);
+  }
+
+  body:has(option#system:checked) a:hover{
+    color: var(--light-hover);
+  }
+
+  header svg{
+    height: 100%;
+    stroke: var(--dark-accent);
+    fill: var(--dark-accent);
+  }
+}
+
+@media (max-width: 750px){
+  .imageprev figure {
+    flex-direction: column !important;
+  }
+  .imageprev figure label:hover img{
+    filter: none;
+  }
+  .imageprev figure label, .imageprev figure figcaption, .imageprev input:checked + label + figcaption {
+    width: 100%;
+  }
+
+  .imageprev label{
+    pointer-events:none;
+  }
+}
+
+/* Firefox ondersteuning */
+@-moz-document url-prefix() {
+  select { 
+    display: none;
+  }
+}
+
+/* Internet Explorer 10+ ondersteuning */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  audio{
+    margin: -5px 0;
+  }
+
+  header, footer{
+    background-color: #333;
+    color: #d4d4d4;
+  }
+
+  nav a:hover, header svg:hover {
+    color: #bb8000;
+    stroke: #bb8000;
+    fill: #bb8000;
+  }
+  
+  header svg{
+    stroke: #d4d4d4;
+    fill: #d4d4d4;
+  }
+  
+  nav a {
+    color: #fff;
+  }
+  
+  nav a:hover, header svg:hover {
+    color: #bb8000;
+    stroke: #bb8000;
+    fill: #bb8000;
+  }
+  
+  nav a:active, header svg:active {
+    color: #c58700 !important;
+    stroke: #c58700;
+    fill: #c58700;
+  }
+  
+  nav a#selected {
+    color: #c58700 !important;
+  }
+  
+  main figure {
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    box-shadow: 3px 4px 7px #ddd;
+    overflow: hidden;
+  }
+  
+  main#macos figure {
+    background-color: #fff;
+  }
+  
+  .imageprev figure{
+    box-shadow: 0 0 7px #ddd inset;
+  }
+  
+  footer > select{
+    background-color: #333;
+    color: #d4d4d4;
+  }
+}

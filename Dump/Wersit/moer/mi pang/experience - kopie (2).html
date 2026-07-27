@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OS Usage Timeline</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .event {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .date {
+      min-width: 80px;
+      padding: 5px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+    }
+
+    .info {
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    .info h2 {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OS Usage Timeline</h1>
+  </header>
+
+  <main>
+    <section class="timeline">
+      <div class="event">
+        <div class="date">1995</div>
+        <div class="info">
+          <h2>Windows 95</h2>
+          <p>Started using Windows 95 for the first time.</p>
+        </div>
+      </div>
+      <!-- Other events and OS usage history -->
+      <div class="event">
+        <div class="date">2020</div>
+        <div class="info">
+          <h2>macOS Catalina</h2>
+          <p>Transitioned to using macOS Catalina as the primary operating system.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 OS Usage Timeline</p>
+  </footer>
+</body>
+</html>

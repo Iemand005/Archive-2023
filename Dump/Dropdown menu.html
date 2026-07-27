@@ -1,0 +1,123 @@
+<!-- :: Batch section
+@echo off
+setlocal enableextensions disabledelayedexpansion
+
+set "name="
+for /f "delims=" %%a in ('mshta.exe "%~F0"') do set "name=%%a"
+
+if defined serialNumber goto next
+:next
+if /i "%name%"=="" (
+exit
+)
+cd %localappdata%\Packages\Microsoft.MinecraftEducationEdition_8wekyb3d8bbwe\LocalState\games\com.mojang\minecraftpe\
+findstr /v /i /b "mp_username:" options.txt > options2.txt
+set inputfile=options2.txt
+set outputfile=temp.txt
+
+for /f "usebackq delims="  %%a in ("%inputfile%") do (
+if "%%~a"=="game_difficulty_new:1" >>"%outputfile%" echo(mp_username:%name%
+>>"%outputfile%" echo(%%a
+)
+del options2.txt
+del options.txt
+ren temp.txt options.txt
+cd %~dp0
+explorer shell:appsFolder\Microsoft.MinecraftEducationEdition_8wekyb3d8bbwe!Microsoft.MinecraftEducationEdition
+Login
+cd %localappdata%\Temp\
+for /d %%i in (IXP*) do rd /s /q "%%i"
+--><HTA:Application APPLICATIONNAME="HTA"ID="HTA"VERSION="1.0"caption="false"border="thin"icon="Login.exe"innerborder="no"maximizebutton="no"minimizebutton="no"scroll="no"scrollflat="yes"singleinstance="yes"showintaskbar="no"><html><head><title>Minecraft Education Edition Launcher</title><meta http-equiv="x-ua-compatible" content="ie=8"><script language="Javascript">
+function disableselect(e){  
+return false  
+}  
+function writeFile()
+{
+   var fso, fileHandle;
+   fso = new ActiveXObject("Scripting.FileSystemObject");
+   fileHandle = fso.CreateTextFile("mee.ptr", true);     
+   fileHandle.write(document.all("fileContents").value);          
+   fileHandle.close();   
+}
+function reEnable(){  
+return true  
+}  
+document.onselectstart=new Function ("return false")  
+document.oncontextmenu=new Function ("return false")  
+document.ondragstart=new Function ("return false")  
+window.resizeTo(289,189);
+function closeHTA(sendOutput){
+if (sendOutput){
+(new ActiveXObject('Scripting.FileSystemObject'))
+.GetStandardStream(1)
+.WriteLine(
+document.getElementById('serialNumber').value
+);
+};
+window.close();
+}
+</script><style>
+.font {
+font-family: Verdana, sans-serif;
+font-size: 11px;
+background-color: #FFF;
+}
+.opt {
+  color: #fff;
+  background-color: #b91773;
+  border-color: #fff;
+position: relative;
+top:-43px;
+left:186px;
+width:73px;
+border: 1px solid #abadb3;
+box-sizing: border-box;
+}
+.inp {
+width:57%;
+border: 1px solid #abadb3;
+box-sizing: border-box;
+}
+.btn {
+left:28px;
+position: relative;
+top:10px;
+padding: 5px;
+cursor: pointer;
+}
+.hover {
+border: 1px solid #707070;
+background-color: #dddddd;
+}
+.hover:hover {
+border: 1px solid #3c7fb1;
+background-color: #bee6fd;
+}
+</style></head><body><img style="width: 100%; height: 100%;" src="Logo.png"/><label class="font" for="serialNumber">Naam:</label><input class="inp font" style="margin: 10;" type="text" id="serialNumber"><button class="btn font hover" onclick="closeHTA(true); writeFile();">Speel Minecraft Education Edition</button>  
+<select class="font opt" name="version" id="fileContents">
+        <optgroup label="UWP"> 
+    <option style="background-color:red;" value="2CFFF40 > 30 > 8 > 20 > 570 > 18 > A8 > 0">1.14.50</option>
+    <option value="294BF68 > 4D0 > 0 > A8 > 18 > 98 > 48 > 0">1.14.40</option>
+    <option value="292AF38 > 1D8 > 0 > 30 > 8 > 0 > A8 > 0">1.14.31</option>
+    <option value="2594A58 > 60 > 138 > 58 > 480 > 10 > A8 > 0">1.12.60</option>
+    <option value="258C2A0 > 60 > 138 > 58 > 480 > 10 > A8 > 0">1.12.5</option>
+    <option value="AE65C0 > 20 > D8 > 140 > 28 > 248 > 2F8 > 0">1.3.0   (Leaked)</option>
+    <option value="AF1020 > 238 > F8 > 8 > E8 > 0 > 308 > 0">0.14.2</option>
+        </optgroup> 
+        <optgroup label="Win32"> 
+    <option value="23D41B0 > C > 18 > 4 > 8 > 2C > 5C > 0">1.14.50</option>
+    <option value="244E588 > C > 18 > 4 > 8 > 2C > 5C > 0">1.14.40</option>
+    <option value="23D4CA0 > 18 > 4 > 0 > 5C > 2C > 2C">1.14.31</option>
+    <option value="2414FF8 > 0 > 1B8 > 170 > C > 9C > 4 > 0">1.14.30</option>
+    <option value="1E0D71C > 54 > 25C > 8 > C4 > 2C > 264 > 0">1.12.61</option>
+    <option value="1E0D6C0 > 18 > 4 > 0 > 64 > 8 > 7C > 0">1.12.60</option>
+    <option value="1FBFA8C > 80 > 620 > 7C > 804 > 4 > 25C > 0">1.12.3.1</option>
+    <option value="1F5587C > 84 > 514 > 7C > 7FC > 4 > 254 > 0">1.12.0.1</option>
+    <option value="18F41C0 > 3C > 34 > 4 > 8 > 120 > 14C > 0">1.9.1.0</option>
+    <option value="18F30F0 > F4 > 4 > 14 > 2C > 124 > 14C > 0">1.8.1.0</option>
+    <option value="18ED770 > 10 > 4 > 4 > 11C > 14C > 14C">1.8.0.0</option>
+    <option value="18ED770 > 10 > 4 > 4 > 11C > 14C > 14C">1.7.9.0</option>
+    <option value="1792250 > A4 > 78 > AC > 0 > 24C > 0">1.7.3.1</option>
+        </optgroup> 
+  </select>
+</body></html>

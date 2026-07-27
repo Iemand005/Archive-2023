@@ -1,0 +1,236 @@
+﻿*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 300ms;
+    -ms-user-select:none;
+    
+}
+
+body, html{
+    height:100%;
+}
+
+header > div > div, header > div > label{
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flexbox;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-decoration: inherit ;
+    color: wheat;
+}
+
+header>div{
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 2;
+}
+
+header>div:nth-child(1) {
+    -ms-grid-column: 1;
+}
+
+header>div:nth-child(2) {
+    -ms-grid-column: 2;
+}
+
+header>div:nth-child(3) {
+    -ms-grid-column: 3;
+}
+
+header>div:nth-child(4) {
+    -ms-grid-column: 4;
+}
+
+
+header>div, header>div>div.flyover{
+    display: flexbox;
+    -ms-flex-direction: column;
+    /*-ms-grid-rows: 50px 1fr;*/
+}
+header>div>div.title{
+    height:50px;
+    width:100%;
+    vertical-align:middle;
+}
+
+div:hover > div.flyover{
+    z-index: 2;
+    position: relative;
+    max-height: 20rem;
+    height:auto;
+    padding: 0 10px;
+    -ms-grid-row: 2;
+    flex-shrink: 0;
+    
+}
+
+div > div.flyover > a{
+    padding: 10px;
+    display:block;
+    max-height:100px;
+}
+
+header, div.flyover, footer{
+    /*filter: blur(100px);*/
+    /*backdrop-filter: saturate(1000) contrast(100) blur(7px) ;*/
+    background: rgb(0, 0, 0);
+    color: white; 
+}
+
+div.flyover{
+    overflow: hidden;
+    overflow-y: auto;
+    height: auto;
+    transition: all 300ms ease-out, padding-left 500ms ease-in-out 100ms, padding-right 500ms ease-in-out 100ms;
+    text-align: left;
+    position: relative;
+    color: white;
+    padding: 0;
+    padding-right: 20px;
+    max-height: 0;
+}
+
+@media screen{
+    div.flyover {
+        display: flexbox;
+    }
+}
+
+
+
+div:hover:nth-of-type(1) > .title, div:nth-of-type(1)>div.flyover{
+    background-color: rgb(56, 105, 56);
+}
+div:hover:nth-of-type(2) > label, div:nth-of-type(2)>div.flyover{
+    background-color: rgb(56, 85, 105);
+}
+div:hover:nth-of-type(3) > .title, div:nth-of-type(3)>div.flyover{
+    background-color: rgb(98, 105, 56);
+}
+div:hover:nth-of-type(4) > .title, div:nth-of-type(4)>div.flyover{
+    background-color: rgb(105, 56, 56);
+}
+
+header{
+    z-index: 2;
+    display: grid;
+    flex-direction: column;
+    grid-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    /*/*//*grid-columns: 1fr*/ 
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    /*padding: 0 22px;*/
+    left: 0;
+    right: 0;
+    top: 0;
+    width:100%;
+    display:-ms-grid;
+    display:inline-grid;
+    flex-direction:column;
+    display: flexbox;
+    flex-direction: row;
+}
+
+header~input#blur:checked ~ main{
+    transition: all 300ms;
+    filter: blur(0px);
+    /*filter: opacity(100%);*/
+}
+
+header:hover~input#blur:checked ~ main {
+    transition: all 10s;
+    filter: blur(5px) saturate(100);
+    
+}
+footer{
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    z-index: 2;
+    color: white;
+    padding: 5px 5px 5px 15px;
+    border-radius: 20px 0 0 20px;
+    display: block;
+    left: 100%;
+    -ms-filter: 'blur(10px)'
+}
+
+@media (min-width: 200px){
+    footer{
+        left: auto;
+        display:block;
+    }
+}
+
+#blur{
+    display: none;
+}
+#blurpa ~ footer> label:hover{
+    background-color: green;
+    right: 15px;
+}
+/*
+#blur:checked ~footer> label{
+    color: red;
+}*/
+
+html, body {
+    min-height:100%;
+    height:100%;
+}
+
+main{
+    margin: 10px;
+    margin-top: 50px;
+    
+    filter: blur(0px) saturate(0);
+    transition: all 5s cubic-bezier(1, -0.02, 0.58, 1);
+}
+
+a p{
+    margin: auto;
+}
+
+header > div{
+    display: flexbox;
+    padding: 0;
+    text-align: center;
+    grid-rows: 100%;
+    user-select: none;
+    grid-row: 0;
+}
+
+html>body>header{
+    display:inline-flexbox;
+}
+
+div.title:hover>a, div.flyover>a:hover, #blurmo ~ footer>label:hover{
+    background-color: rgb(91, 91, 91);
+}
+
+div.title:active>a, div.flyover>a:active{
+    background-color: #FFFF0A;
+    transition: all 10ms;
+}
+
+#blur:checked ~ footer{
+    background-color: green;
+}
+
+a{
+    width: 100%;
+    margin:0;
+    display: inline-flexbox;
+    min-height: 50px;
+    border-bottom: 1px solid black;
+}
+
+h1{
+    text-align: center;
+}

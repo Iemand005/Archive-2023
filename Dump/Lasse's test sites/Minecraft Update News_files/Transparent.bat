@@ -1,0 +1,1 @@
+gm mogrify -transparent white "%~1"
